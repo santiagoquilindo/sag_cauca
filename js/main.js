@@ -1,4 +1,4 @@
-// Menú hamburguesa en móvil
+// Menu hamburguesa en movil
 const navToggle = document.getElementById("navToggle");
 const mainNav = document.getElementById("mainNav");
 
@@ -8,7 +8,7 @@ if (navToggle && mainNav) {
   });
 }
 
-// Año dinámico en el footer
+// Ano dinamico en el footer
 const yearSpan = document.getElementById("year");
 if (yearSpan) {
   yearSpan.textContent = new Date().getFullYear();
