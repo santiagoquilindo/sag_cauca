@@ -4,14 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SAG Cauca - Sociedad de Agricultores y Ganaderos del Cauca</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
 </head>
 <body>
 <header class="site-header">
   <div class="container header-content">
     <a href="index.html" class="logo">
-      <span class="logo-mark">SAG</span>
-      <span class="logo-text">Cauca</span>
+      <img src="public/img/logo1.jpg" alt="SAG Cauca" class="logo-img">
+      <span class="sr-only">SAG Cauca</span>
     </a>
 
     <button class="nav-toggle" id="navToggle" aria-label="Abrir men&uacute;">
@@ -21,9 +25,10 @@
     <nav class="main-nav" id="mainNav">
       <ul>
         <li><a href="index.html" class="active">Inicio</a></li>
-        <li><a href="quienes-somos.html">Qui&eacute;nes Somos</a></li>
-        <li><a href="servicios.html">Servicios al Gremio</a></li>
-        <li><a href="noticias.html">Noticias y Comunicaci&oacute;n</a></li>
+        <li><a href="quienes-somos.html">Nosotros</a></li>
+        <li><a href="historia.html">Historia</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
@@ -39,12 +44,12 @@
         <h1>Sociedad de Agricultores y Ganaderos del Cauca</h1>
         <p>
           Gremio que representa, articula y fortalece a los productores del Cauca,
-          impulsando un sector agropecuario m&aacute;s competitivo y sostenible.
+          impulsando un sector agropecuario mas competitivo y sostenible.
         </p>
 
         <div class="hero-ctas">
-          <a href="servicios.html" class="btn btn-accent">Ver beneficios de afiliaci&oacute;n</a>
-          <a href="noticias.html" class="btn btn-outline">Comunicados recientes</a>
+          <a href="noticias.html" class="btn btn-accent">Noticias y comunicados</a>
+          <a href="contacto.html" class="btn btn-outline">Contacto</a>
         </div>
 
         <div class="hero-kpis">
@@ -63,12 +68,6 @@
         </div>
       </div>
 
-      <div class="hero-image">
-        <!-- Puedes reemplazar por una imagen real -->
-        <div class="hero-placeholder">
-          <span>Foto de productores del Cauca<br>(reemplazar por imagen real)</span>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -76,45 +75,41 @@
   <section class="section" id="servicios-resumen">
     <div class="container">
       <header class="section-header">
-        <h2>Servicios al gremio</h2>
+        <h2>Nosotros</h2>
         <p>
-          Acompa&ntilde;amos a los productores del Cauca con servicios t&eacute;cnicos, gremiales
-          y de articulaci&oacute;n institucional.
+          Nuestra identidad gremial: misi&oacute;n, visi&oacute;n y valores que inspiran a la SAG Cauca.
         </p>
       </header>
 
       <div class="cards-grid">
         <article class="card">
-          <h3>Asesor&iacute;a t&eacute;cnica</h3>
+          <h3>Misi&oacute;n</h3>
           <p>
-            Acompa&ntilde;amiento en campo, buenas pr&aacute;cticas agr&iacute;colas y ganaderas,
-            asistencia en productividad y sostenibilidad.
+            Representar y fortalecer al sector agropecuario del Cauca, impulsando la productividad,
+            la sostenibilidad y el bienestar rural mediante la gesti&oacute;n gremial, la innovaci&oacute;n
+            y el trabajo conjunto con el sector p&uacute;blico y privado.
           </p>
-          <a href="servicios.html#asesoria-tecnica" class="card-link">
-            Ver m&aacute;s sobre asesor&iacute;a t&eacute;cnica &rarr;
-          </a>
         </article>
 
         <article class="card">
-          <h3>Convenios y beneficios</h3>
+          <h3>Visi&oacute;n</h3>
           <p>
-            Alianzas con entidades p&uacute;blicas y privadas para facilitar acceso a
-            insumos, servicios y programas de apoyo.
+            Ser el gremio l&iacute;der y referente del desarrollo agropecuario en el Cauca, reconocido
+            por impulsar un sector competitivo, innovador y sostenible, que contribuya al progreso
+            econ&oacute;mico, social y ambiental del departamento y al bienestar de sus comunidades rurales.
           </p>
-          <a href="servicios.html#convenios-beneficios" class="card-link">
-            Ver convenios vigentes &rarr;
-          </a>
         </article>
 
         <article class="card">
-          <h3>Representaci&oacute;n gremial</h3>
-          <p>
-            Vocer&iacute;a ante entidades gubernamentales, gremios nacionales y medios
-            de comunicaci&oacute;n, defendiendo los intereses del sector.
-          </p>
-          <a href="servicios.html#proceso-afiliacion" class="card-link">
-            Ver proceso de afiliaci&oacute;n &rarr;
-          </a>
+          <h3>Valores</h3>
+          <ul class="list">
+            <li>Liderazgo gremial</li>
+            <li>Compromiso social</li>
+            <li>Integridad y transparencia</li>
+            <li>Sostenibilidad ambiental</li>
+            <li>Innovaci&oacute;n y competitividad</li>
+            <li>Unidad</li>
+          </ul>
         </article>
       </div>
     </div>
@@ -126,7 +121,7 @@
       <header class="section-header">
         <h2>Noticias y comunicados</h2>
         <p>
-          Centralizamos la informaci&oacute;n oficial del gremio para productores,
+          Centralizamos la informacion oficial del gremio para productores,
           entidades y medios.
         </p>
       </header>
@@ -190,6 +185,19 @@
 
 </main>
 
+<a
+  href="https://wa.me/573155692130"
+  class="whatsapp-fab"
+  target="_blank"
+  rel="noopener"
+  aria-label="Contactar por WhatsApp"
+>
+  <span class="sr-only">WhatsApp</span>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+    <path d="M16.02 3C9.94 3 5 7.93 5 13.99c0 2.4.73 4.62 2 6.49L5 27l6.8-1.93a10.93 10.93 0 0 0 4.21.84C22.9 25.9 27 21 27 14.99 27 8.94 22.1 3 16.02 3m0 2c5.03 0 8.98 4.15 8.98 9.99 0 5.7-3.9 9.9-8.98 9.9-1.34 0-2.6-.27-3.77-.76l-.54-.23-4.04 1.14 1.12-3.94-.26-.56a8.7 8.7 0 0 1-1-4.55C7.53 9.15 11 5 16.02 5m5.1 10.86c-.07-.11-.25-.18-.52-.3-.26-.12-1.54-.76-1.78-.84-.24-.09-.42-.13-.6.12-.18.26-.7.85-.86 1.03-.16.18-.32.19-.58.07-.26-.13-1.12-.41-2.14-1.32-.79-.71-1.32-1.58-1.48-1.84-.16-.26-.02-.4.12-.52.13-.13.26-.3.4-.45.13-.15.18-.26.26-.43.09-.17.04-.33-.02-.46-.06-.13-.6-1.45-.83-1.98-.22-.52-.44-.45-.6-.46l-.5-.01c-.17 0-.46.07-.7.33-.24.26-.92.9-.92 2.2 0 1.3.95 2.55 1.08 2.73.13.18 1.87 3.07 4.52 4.18.63.27 1.12.43 1.5.56.63.2 1.2.17 1.65.1.5-.08 1.54-.63 1.76-1.24.22-.6.22-1.12.15-1.23" />
+  </svg>
+</a>
+
 <footer class="site-footer">
   <div class="container footer-grid">
     <div>
@@ -229,3 +237,4 @@
 <script src="js/main.js"></script>
 </body>
 </html>
+

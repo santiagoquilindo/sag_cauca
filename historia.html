@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Noticias - SAG Cauca</title>
+  <title>Historia - SAG Cauca</title>
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/utilities.css">
   <link rel="stylesheet" href="css/layout.css">
@@ -17,14 +17,16 @@
       <img src="public/img/logo1.jpg" alt="SAG Cauca" class="logo-img">
       <span class="sr-only">SAG Cauca</span>
     </a>
-    <button class="nav-toggle" id="navToggle" aria-label="Abrir men&uacute;">&#9776;</button>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+      &#9776;
+    </button>
     <nav class="main-nav" id="mainNav">
       <ul>
         <li><a href="index.html">Inicio</a></li>
         <li><a href="quienes-somos.html">Nosotros</a></li>
-        <li><a href="historia.html">Historia</a></li>
+        <li><a href="historia.html" class="active">Historia</a></li>
         <li><a href="servicios.html">Servicios</a></li>
-        <li><a href="noticias.html" class="active">Noticias</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
@@ -32,72 +34,58 @@
 </header>
 
 <main>
-  <section class="page-hero">
+  <section class="page-hero hero-nosotros">
     <div class="container">
-      <h1>Noticias</h1>
-      <p>Comunicados oficiales, noticias y calendario de eventos del gremio.</p>
+      <h1>Historia</h1>
+      <p>Conoce el origen y legado de la SAG Cauca.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <h2>Comunicados de prensa</h2>
-
-      <div class="news-grid">
-        <article class="news-item">
-          <span class="news-date">10 Ene 2026</span>
-          <h3>T&iacute;tulo del comunicado #1</h3>
+      <article class="pillar historia">
+        <div class="pillar-text">
+          <h2>Nuestra Historia</h2>
           <p>
-            Resumen breve del comunicado oficial. Esta secci&oacute;n se alimentar&aacute;
-            con los contenidos validados por comunicaciones.
+            <em>La Sociedad de Agricultores y Ganaderos del Cauca &ndash; SAG Cauca fue constituida el 27 de mayo de 1994, en el Salón de Conferencias del Centro Administrativo Municipal &ndash; CAM, IV Etapa, en la ciudad de Popayán. Ese día, un grupo de productores agropecuarios, ganaderos, empresarios y representantes de asociaciones del departamento del Cauca se reunió con un propósito común: crear un gremio sólido que defendiera sus intereses y fortaleciera el desarrollo del campo caucano.</em>
           </p>
-        </article>
-
-        <article class="news-item">
-          <span class="news-date">05 Ene 2026</span>
-          <h3>T&iacute;tulo del comunicado #2</h3>
           <p>
-            Otro ejemplo de noticia o comunicado institucional. Reemplazar por
-            informaci&oacute;n real.
+            <em>Estos socios fundadores provenían de diferentes municipios y cadenas productivas del departamento, y aportaron su visión, experiencia y liderazgo para dar vida a una entidad gremial independiente, comprometida con la representación, la unidad y el progreso del sector agropecuario. Su decisión de organizarse colectivamente marcó el inicio de una historia de trabajo continuo en favor de los productores y de las comunidades rurales.</em>
           </p>
-        </article>
-      </div>
+          <p>
+            <em>Desde entonces, SAG Cauca ha honrado el legado de sus fundadores consolidándose como el gremio que integra a pequeños, medianos y grandes productores, gestionando proyectos, generando alianzas con entidades públicas y privadas, y promoviendo un campo caucano más competitivo, sostenible e incluyente.</em>
+          </p>
+        </div>
+        <div class="history-side">
+          <div class="history-hero">
+            <img src="public/img/asambleasag.jpeg" alt="Asamblea SAG Cauca">
+          </div>
+        </div>
+      </article>
     </div>
   </section>
 
   <section class="section section-alt">
     <div class="container">
-      <h2>Eventos y calendario</h2>
-      <p>
-        Aqu&iacute; puedes listar las pr&oacute;ximas asambleas, jornadas de capacitaci&oacute;n y
-        actividades del gremio.
-      </p>
-
-      <div class="table-wrapper">
-        <table class="events-table">
-          <thead>
-            <tr>
-              <th>Fecha</th>
-              <th>Evento</th>
-              <th>Lugar</th>
-              <th>Detalle</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>15 Ene 2026</td>
-              <td>Jornada de capacitaci&oacute;n en buenas pr&aacute;cticas</td>
-              <td>Popay&aacute;n</td>
-              <td><em>Reemplazar por informaci&oacute;n real del evento.</em></td>
-            </tr>
-            <tr>
-              <td>30 Ene 2026</td>
-              <td>Asamblea de productores</td>
-              <td>Cauca</td>
-              <td><em>Reemplazar por informaci&oacute;n real del evento.</em></td>
-            </tr>
-          </tbody>
-        </table>
+      <h2>Homenaje a Fundadores</h2>
+      <p>Reconocemos a quienes impulsaron el nacimiento de la SAG Cauca.</p>
+      <div class="history-team">
+        <div class="team-card">
+          <img src="public/img/jorgecastro.jpg" alt="Jorge Castro">
+          <h3>Jorge Castro</h3>
+        </div>
+        <div class="team-card">
+          <img src="public/img/gabrielzambrano.jpg" alt="Gabriel Zambrano">
+          <h3>Gabriel Zambrano</h3>
+        </div>
+        <div class="team-card team-isaac">
+          <img src="public/img/isaacrabinovich.jpg" alt="Isaac Rabinovich">
+          <h3>Isaac Rabinovich</h3>
+        </div>
+        <div class="team-card team-edgar">
+          <img src="public/img/edgardorronsoro.jpg" alt="Edgar Dorronsoro">
+          <h3>Edgar Dorronsoro</h3>
+        </div>
       </div>
     </div>
   </section>
@@ -125,9 +113,9 @@
     <div>
       <h4>Contacto</h4>
       <p>
-        Cra. 12 #19N-06 B/Catay - Popay&aacute;n<br>
-        Tel: <a href="tel:+573155692130">315 569 2130</a><br>
-        Tel: <a href="tel:+576028395614">(602) 8395614</a><br>
+        Cra. 12 #19N-06 B/Catay - Popayán<br />
+        Tel: <a href="tel:+573155692130">315 569 2130</a><br />
+        Tel: <a href="tel:+576028395614">(602) 8395614</a><br />
         Correo: <a href="mailto:sagcauca@gmail.com">sagcauca@gmail.com</a>
       </p>
     </div>
@@ -149,4 +137,3 @@
 <script src="js/main.js"></script>
 </body>
 </html>
-

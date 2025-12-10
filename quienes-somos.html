@@ -3,27 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Qui&eacute;nes Somos - SAG Cauca</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    <title>Nosotros - SAG Cauca</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/utilities.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/sections.css" />
   </head>
   <body>
     <header class="site-header">
       <div class="container header-content">
         <a href="index.html" class="logo">
-          <span class="logo-mark">SAG</span>
-          <span class="logo-text">Cauca</span>
+          <img src="public/img/logo1.jpg" alt="SAG Cauca" class="logo-img">
+          <span class="sr-only">SAG Cauca</span>
         </a>
-        <button class="nav-toggle" id="navToggle" aria-label="Abrir men&uacute;">
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">
           &#9776;
         </button>
         <nav class="main-nav" id="mainNav">
           <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li>
-              <a href="quienes-somos.html" class="active">Qui&eacute;nes Somos</a>
-            </li>
-            <li><a href="servicios.html">Servicios al Gremio</a></li>
-            <li><a href="noticias.html">Noticias y Comunicaci&oacute;n</a></li>
+        <li><a href="index.html">Inicio</a></li>
+        <li>
+          <a href="quienes-somos.html" class="active">Nosotros</a>
+        </li>
+        <li><a href="historia.html">Historia</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
             <li><a href="contacto.html">Contacto</a></li>
           </ul>
         </nav>
@@ -31,120 +36,68 @@
     </header>
 
     <main>
-      <section class="page-hero hero-nosotros">
+            <section class="page-hero hero-nosotros">
         <div class="container">
-          <h1>Qui&eacute;nes Somos</h1>
+          <h1>Nosotros</h1>
           <p>Conoce la misi&oacute;n, visi&oacute;n, valores y equipo de la SAG Cauca.</p>
         </div>
       </section>
 
-      <section
-        class="section section-nosotros"
-        style="background: linear-gradient(135deg, rgba(16, 75, 43, 0.8), rgba(0, 0, 0, 0.65)), url('public/img/nosotros.jpg') center/cover no-repeat; color: #ffffff;"
-      >
-        <div class="container two-cols">
-          <div>
-            <h2>Misi&oacute;n</h2>
-            <p>
-              <em
-                >Somos una entidad gremial sin &aacute;nimo de lucro, dedicada a la
-                defensa y representaci&oacute;n de los leg&iacute;timos intereses de los
-                productores del sector agropecuario. Desarrollamos e
-                implementamos programas y servicios integrales que impulsan la
-                competitividad, el desarrollo sostenible y el bienestar del
-                sector en general, de las comunidades rurales y de nuestros
-                afiliados.
-              </em>
-            </p>
+      <section class="section section-nosotros">
+        <div class="container">
+          <div class="about-pillars">
+            <article class="pillar mision">
+              <div class="pillar-text">
+                <h2>Misi&oacute;n</h2>
+                <p>
+                  <em>
+                    Somos una entidad gremial sin &aacute;nimo de lucro, dedicada a la defensa y representaci&oacute;n de los leg&iacute;timos intereses de los productores del sector agropecuario. Desarrollamos e implementamos programas y servicios integrales que impulsan la competitividad, el desarrollo sostenible y el bienestar del sector en general, de las comunidades rurales y de nuestros afiliados.
+                  </em>
+                </p>
+              </div>
+              <div class="pillar-media">
+                <img src="public/img/mision.jpg" alt="Asesor&iacute;a t&eacute;cnica en campo">
+              </div>
+            </article>
 
-            <h2>Visi&oacute;n</h2>
-            <p>
-              <em
-                >Para el a&ntilde;o 2030, seremos el gremio m&aacute;s consolidado y
-                reconocido en el departamento del Cauca, liderando la defensa,
-                promoci&oacute;n y representaci&oacute;n de todos los productores
-                agropecuarios. Generaremos valor agregado a trav&eacute;s de la
-                provisi&oacute;n de servicios integrales y de excelencia, logrando
-                fortalecer la productividad, la competitividad y la
-                sostenibilidad de un sector en permanente transformaci&oacute;n e
-                innovaci&oacute;n.
-              </em>
-            </p>
+            <article class="pillar vision">
+              <div class="pillar-text">
+                <h2>Visi&oacute;n</h2>
+                <p>
+                  <em>
+                    Representar y fortalecer al sector agropecuario del Cauca, impulsando la productividad, la sostenibilidad y el bienestar rural mediante la gesti&oacute;n gremial, la innovaci&oacute;n y el trabajo conjunto con el sector p&uacute;blico y privado.
+                  </em>
+                </p>
+              </div>
+              <div class="pillar-media">
+                <img src="public/img/vision1.jpg" alt="Proyecci&oacute;n del gremio agropecuario">
+              </div>
+            </article>
 
-            <h2>Valores</h2>
-            <ul class="list">
-              <li>
-                <em
-                  >Liderazgo gremial: Representamos y defendemos con voz
-                  unificada los intereses del agro caucano.</em
-                >
-              </li>
-              <li>
-                <em
-                  >Compromiso social: Impulsamos el bienestar, la unidad y la
-                  prosperidad de las comunidades rurales.</em
-                >
-              </li>
-              <li>
-                <em
-                  >Integridad y transparencia: Garantizamos la &eacute;tica, la
-                  honestidad y el uso responsable de nuestros recursos.</em
-                >
-              </li>
-              <li>
-                <em
-                  >Sostenibilidad ambiental: Promovemos pr&aacute;cticas responsables
-                  para la conservaci&oacute;n del ecosistema regional.</em
-                >
-              </li>
-              <li>
-                <em
-                  >Innovaci&oacute;n y competitividad: Fomentamos la transformaci&oacute;n y
-                  la excelencia en los servicios al sector.</em
-                >
-              </li>
-              <li>
-                <em
-                  >Unidad: La base de nuestro trabajo es la articulaci&oacute;n para el
-                  desarrollo eficiente del gremio.</em
-                >
-              </li>
-            </ul>
-          </div>
+            <article class="pillar valores">
+              <div class="pillar-text">
+                <h2>Valores</h2>
+                <ul class="list">
+                  <li>Liderazgo gremial</li>
+                  <li><em>Compromiso social</em></li>
+                  <li><em>Integridad y transparencia</em></li>
+                  <li><em>Sostenibilidad ambiental</em></li>
+                  <li><em>Innovaci&oacute;n y competitividad</em></li>
+                  <li><em>Unidad</em></li>
+                </ul>
+              </div>
+              <div class="pillar-media">
+                <img src="public/img/valores.jpg" alt="Valores y trabajo colaborativo en el campo">
+              </div>
+            </article>
 
-          <div>
-            <h2>Nuestra Historia</h2>
-            <p>
-              <em
-                >La SAG Cauca fue fundada en el contexto de una creciente
-                necesidad de representaci&oacute;n y defensa de los productores
-                rurales. Obtuvo su Personer&iacute;a Jur&iacute;dica el 19 de octubre de 1994
-                (NIT 800253785-0), consolid&aacute;ndose como la voz autorizada del
-                sector agropecuario del departamento.</em
-              >
-              <em
-                >Operamos como una entidad gremial sin &aacute;nimo de lucro en un
-                entorno de permanente transformaci&oacute;n. Nuestro rol central es la
-                defensa de los leg&iacute;timos intereses del productor, garantizando
-                la seguridad jur&iacute;dica y la promoci&oacute;n de pol&iacute;ticas p&uacute;blicas que
-                impulsen la inversi&oacute;n y el desarrollo en el campo caucano.</em
-              >
-              <em
-                >El trabajo de la SAG Cauca se enfoca en la innovaci&oacute;n,
-                sostenibilidad y competitividad. Lideramos la gesti&oacute;n de
-                proyectos de asistencia t&eacute;cnica y desarrollo social, buscando
-                valor agregado para los afiliados. Actualmente, bajo la
-                Direcci&oacute;n Ejecutiva de Isabella Victoria Rojas, hemos
-                centralizado nuestra operaci&oacute;n en la sede: Carrera 12 # 19 Norte
-                06, Barrio Catay, Popay&aacute;n, marcando un compromiso renovado con
-                el futuro del sector.</em
-              >
-            </p>
           </div>
         </div>
       </section>
 
-      <section class="section section-alt">
+      
+
+<section class="section section-alt">
         <div class="container">
           <h2>Junta Directiva y Equipo</h2>
           <p>
@@ -153,7 +106,7 @@
           <div class="cards-grid">
             <article class="card">
               <h3>Isabella Victoria Rojas</h3>
-              <p>Cargo - Representante Legal</p>
+              <p>Direectora Ejecutiva</p>
             </article>
             <article class="card">
               <h3>Nombre Apellido</h3>
@@ -167,6 +120,19 @@
         </div>
       </section>
     </main>
+
+    <a
+      href="https://wa.me/573155692130"
+      class="whatsapp-fab"
+      target="_blank"
+      rel="noopener"
+      aria-label="Contactar por WhatsApp"
+    >
+      <span class="sr-only">WhatsApp</span>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+        <path d="M16.02 3C9.94 3 5 7.93 5 13.99c0 2.4.73 4.62 2 6.49L5 27l6.8-1.93a10.93 10.93 0 0 0 4.21.84C22.9 25.9 27 21 27 14.99 27 8.94 22.1 3 16.02 3m0 2c5.03 0 8.98 4.15 8.98 9.99 0 5.7-3.9 9.9-8.98 9.9-1.34 0-2.6-.27-3.77-.76l-.54-.23-4.04 1.14 1.12-3.94-.26-.56a8.7 8.7 0 0 1-1-4.55C7.53 9.15 11 5 16.02 5m5.1 10.86c-.07-.11-.25-.18-.52-.3-.26-.12-1.54-.76-1.78-.84-.24-.09-.42-.13-.6.12-.18.26-.7.85-.86 1.03-.16.18-.32.19-.58.07-.26-.13-1.12-.41-2.14-1.32-.79-.71-1.32-1.58-1.48-1.84-.16-.26-.02-.4.12-.52.13-.13.26-.3.4-.45.13-.15.18-.26.26-.43.09-.17.04-.33-.02-.46-.06-.13-.6-1.45-.83-1.98-.22-.52-.44-.45-.6-.46l-.5-.01c-.17 0-.46.07-.7.33-.24.26-.92.9-.92 2.2 0 1.3.95 2.55 1.08 2.73.13.18 1.87 3.07 4.52 4.18.63.27 1.12.43 1.5.56.63.2 1.2.17 1.65.1.5-.08 1.54-.63 1.76-1.24.22-.6.22-1.12.15-1.23" />
+      </svg>
+    </a>
 
     <footer class="site-footer">
       <div class="container footer-grid">
@@ -201,3 +167,4 @@
     <script src="js/main.js"></script>
   </body>
 </html>
+
