@@ -11,56 +11,38 @@
   <link rel="stylesheet" href="css/sections.css">
 </head>
 <body>
-<header class="site-header">
-  <div class="container header-content">
-    <a href="index.html" class="logo">
-      <img src="public/img/logo1.jpg" alt="SAG Cauca" class="logo-img">
-      <span class="sr-only">SAG Cauca</span>
-    </a>
-    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">&#9776;</button>
-    <nav class="main-nav" id="mainNav">
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="quienes-somos.html">Quiénes Somos</a></li>
-        <li><a href="historia.html">Historia</a></li>
-        <li><a href="servicios.html">Servicios</a></li>
-        <li><a href="noticias.html">Noticias</a></li>
-        <li><a href="contacto.html" class="active">Contacto</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+<div id="site-header"></div>
 
 <main>
   <section class="page-hero">
     <div class="container">
       <h1>Contacto</h1>
-      <p>Comunícate con la SAG Cauca para información, servicios y afiliaciones.</p>
+      <p>Comun&iacute;cate con la SAG Cauca para informaci&oacute;n, servicios y afiliaciones.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="container two-cols">
       <div>
-        <h2>Información de contacto</h2>
+        <h2>Informaci&oacute;n de contacto</h2>
         <p>
-          Dirección:<br>
-          Cra. 12 #19N-06 B/Catay - Popayán Cauca, Colombia
+          Direcci&oacute;n:<br>
+          Cra. 12 #19N-06 B/Catay - Popay&aacute;n Cauca, Colombia
         </p>
         <p>
-          Teléfonos:<br>
+          Tel&eacute;fonos:<br>
           <a href="tel:+573155692130">315 569 2130</a><br>
           <a href="tel:+576028395614">(602) 8395614</a>
         </p>
         <p>
-          Correo electrónico:<br>
+          Correo electr&oacute;nico:<br>
           <a href="mailto:sagcauca@gmail.com">sagcauca@gmail.com</a>
         </p>
 
-        <h3>Ubicación en mapa</h3>
+        <h3>Ubicaci&oacute;n en mapa</h3>
         <div class="map-wrapper">
           <iframe
-            title="Ubicación SAG Cauca"
+            title="Ubicaci&oacute;n SAG Cauca"
             src="https://maps.google.com/maps?q=Popay%C3%A1n%20Cauca&z=14&output=embed"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -73,12 +55,12 @@
           <label for="nombre">Nombre completo</label>
           <input type="text" id="nombre" name="nombre" required>
 
-          <label for="correo">Correo electrónico</label>
+          <label for="correo">Correo electr&oacute;nico</label>
           <input type="email" id="correo" name="correo" required>
 
-          <label for="canal">¿Cómo quieres enviar el mensaje?</label>
+          <label for="canal">&iquest;C&oacute;mo quieres enviar el mensaje?</label>
           <select id="canal" name="canal">
-            <option value="correo" selected>Correo electrónico</option>
+            <option value="correo" selected>Correo electr&oacute;nico</option>
             <option value="whatsapp">WhatsApp</option>
           </select>
 
@@ -89,7 +71,7 @@
           <p class="form-status" id="contactStatus" aria-live="polite"></p>
 
           <p class="form-note">
-            No almacenamos tus datos. Elige si deseas abrir tu cliente de correo o WhatsApp; si no se abre, copia y envía el mensaje manualmente.
+            No almacenamos tus datos. Elige si deseas abrir tu cliente de correo o WhatsApp; si no se abre, copia y env&iacute;a el mensaje manualmente.
           </p>
         </form>
       </div>
@@ -97,50 +79,9 @@
   </section>
 </main>
 
-<a
-  href="https://wa.me/573155692130"
-  class="whatsapp-fab"
-  target="_blank"
-  rel="noopener"
-  aria-label="Contactar por WhatsApp"
->
-  <span class="sr-only">WhatsApp</span>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
-    <path d="M16.02 3C9.94 3 5 7.93 5 13.99c0 2.4.73 4.62 2 6.49L5 27l6.8-1.93a10.93 10.93 0 0 0 4.21.84C22.9 25.9 27 21 27 14.99 27 8.94 22.1 3 16.02 3m0 2c5.03 0 8.98 4.15 8.98 9.99 0 5.7-3.9 9.9-8.98 9.9-1.34 0-2.6-.27-3.77-.76l-.54-.23-4.04 1.14 1.12-3.94-.26-.56a8.7 8.7 0 0 1-1-4.55C7.53 9.15 11 5 16.02 5m5.1 10.86c-.07-.11-.25-.18-.52-.3-.26-.12-1.54-.76-1.78-.84-.24-.09-.42-.13-.6.12-.18.26-.7.85-.86 1.03-.16.18-.32.19-.58.07-.26-.13-1.12-.41-2.14-1.32-.79-.71-1.32-1.58-1.48-1.84-.16-.26-.02-.4.12-.52.13-.13.26-.3.4-.45.13-.15.18-.26.26-.43.09-.17.04-.33-.02-.46-.06-.13-.6-1.45-.83-1.98-.22-.52-.44-.45-.6-.46l-.5-.01c-.17 0-.46.07-.7.33-.24.26-.92.9-.92 2.2 0 1.3.95 2.55 1.08 2.73.13.18 1.87 3.07 4.52 4.18.63.27 1.12.43 1.5.56.63.2 1.2.17 1.65.1.5-.08 1.54-.63 1.76-1.24.22-.6.22-1.12.15-1.23" />
-  </svg>
-</a>
+<div id="site-footer"></div>
 
-<footer class="site-footer">
-  <div class="container footer-grid">
-    <div>
-      <h3>SAG Cauca</h3>
-      <p>Sociedad de Agricultores y Ganaderos del Cauca.</p>
-    </div>
-    <div>
-      <h4>Contacto</h4>
-      <p>
-        Cra. 12 #19N-06 B/Catay - Popayán<br>
-        Tel: <a href="tel:+573155692130">315 569 2130</a><br>
-        Tel: <a href="tel:+576028395614">(602) 8395614</a><br>
-        Correo: <a href="mailto:sagcauca@gmail.com">sagcauca@gmail.com</a>
-      </p>
-    </div>
-    <div>
-      <h4>Redes sociales</h4>
-      <p class="social-links">
-        <a href="#">X</a>
-        <a href="#">Facebook</a>
-      </p>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <div class="container">
-      <small>&copy; <span id="year"></span> SAG Cauca. Todos los derechos reservados.</small>
-    </div>
-  </div>
-</footer>
-
+<script src="js/includes.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
-
