@@ -1,12 +1,13 @@
 .hero {
-  background: url("/public/img/mano.jpg") center/cover no-repeat;
-  color: #ffffff;
-  padding: 2.5rem 0 3rem;
   position: relative;
+  color: #ffffff;
+  min-height: clamp(360px, 70vh, 620px);
+  display: flex;
+  align-items: center;
+  padding: 4rem 0 4.5rem;
   overflow: hidden;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  background: linear-gradient(120deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.2)),
+    url("/public/img/mano.jpg") center/cover no-repeat;
 }
 .hero h1,
 .hero p,
@@ -17,11 +18,11 @@
   color: #ffffff;
 }
 .hero .container,
-.page-hero .container {
+.page-hero .container,
+.hero-grid {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
-
 .hero-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -244,16 +245,14 @@
 
 .page-hero {
   position: relative;
-  background: url("/public/img/mano.jpg") center/cover no-repeat;
   color: var(--color-white);
-  padding: 2.5rem 0 3rem;
-  min-height: clamp(320px, 55vh, 520px);
+  padding: 3.5rem 0 4.5rem;
+  min-height: clamp(320px, 65vh, 560px);
   display: flex;
   align-items: center;
   overflow: hidden;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  background: linear-gradient(120deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.2)),
+    url("/public/img/mano.jpg") center/cover no-repeat;
 }
 .page-hero h1 {
   margin-bottom: 0.35rem;
@@ -266,9 +265,10 @@
 .hero .hero-bg {
   position: absolute;
   inset: 0;
-  background: var(--hero-bg-image, url("/public/img/mano.jpg")) center/cover no-repeat;
+  background: linear-gradient(120deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.2)),
+    var(--hero-bg-image, url("/public/img/mano.jpg")) center/cover no-repeat;
   opacity: 0;
-  transition: opacity 0.9s ease;
+  transition: opacity 0s linear;
   pointer-events: none;
   z-index: 0;
   background-size: cover;
@@ -313,7 +313,8 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding-bottom: 4rem;
+    padding: 3rem 0 3.5rem;
+    min-height: 70vh;
   }
   .hero-ctas {
     flex-direction: column;
@@ -336,8 +337,8 @@
 
 @media (max-width: 480px) {
   .hero {
-    padding-top: 2rem;
-    padding-bottom: 4.5rem;
+    padding: 2.5rem 0 3rem;
+    min-height: 65vh;
   }
   .hero-text h1 {
     font-size: 1.6rem;

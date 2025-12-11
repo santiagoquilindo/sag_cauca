@@ -2,13 +2,20 @@
   const CONTACT_EMAIL = "sagcauca@gmail.com";
   const WHATSAPP_NUMBER = "573155692130";
   const HERO_CAROUSEL_IMAGES = [
-    "/public/img/azucar.jpg",
-    "/public/img/cafe1.jpg",
-    "/public/img/panela.jpg",
-    "/public/img/pinos.png",
     "/public/img/mano.jpg",
+    "/public/img/pinos.jpg",
+    "/public/img/mision.jpg",
+    "/public/img/vision1.jpg",
+    "/public/img/azucar.jpg",
+    "/public/img/pina.jpg",
+    "/public/img/fresa.jpg",
+    "/public/img/fresa1.jpg",
+    "/public/img/forestal.jpg",
+    "/public/img/cultivo.jpg",
+    "/public/img/limon2.jpg",
+    "/public/img/mango.jpg",
   ];
-  const HERO_CAROUSEL_INTERVAL_MS = 4500;
+  const HERO_CAROUSEL_INTERVAL_MS = 4000;
   let initialized = false;
 
   const setFooterYear = () => {
