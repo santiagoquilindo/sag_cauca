@@ -1,354 +1,566 @@
-.hero {
+/* ==========================
+   HERO 50/50 ALTURA COMPLETA
+   ========================== */
+.page-hero{
   position: relative;
-  color: #ffffff;
-  min-height: clamp(360px, 70vh, 620px);
-  display: flex;
-  align-items: center;
-  padding: 4rem 0 4.5rem;
-  overflow: hidden;
-  background: linear-gradient(120deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.2)),
-    url("/public/img/mano.jpg") center/cover no-repeat;
-}
-.hero h1,
-.hero p,
-.hero a,
-.page-hero h1,
-.page-hero p,
-.page-hero a {
-  color: #ffffff;
-}
-.hero .container,
-.page-hero .container,
-.hero-grid {
-  position: relative;
-  z-index: 2;
-}
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.75rem;
+  isolation: isolate;
 }
 
-.hero-text h1 {
-  font-size: 1.8rem;
-  margin-bottom: 0.75rem;
-}
-.hero-text p {
-  margin-bottom: 1.25rem;
-}
-.hero-ctas {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-bottom: 1.5rem;
-}
-.hero-kpis {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.hero-image {
-  display: flex;
-  justify-content: center;
-}
-.hero-image .hero-placeholder {
-  border-radius: var(--radius-lg);
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px dashed rgba(255, 255, 255, 0.5);
-  padding: 1.5rem 1rem;
-  text-align: center;
-  font-size: 0.9rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 220px;
-  width: 100%;
-}
-.hero-logo {
-  width: 100%;
-  max-width: 120px;
-  height: auto;
-  display: block;
-}
-
-.section-header {
-  text-align: center;
-  max-width: 680px;
-  margin: 0 auto 2rem;
-}
-.section-header p {
-  color: var(--color-muted);
-}
-
-.section-alt {
-  background-color: #ffffff;
-}
-
-.section-nosotros {
-  background-color: #ffffff;
-  color: var(--color-text);
-}
-.about-pillars {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.25rem;
-}
-.pillar {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  background: #ffffff;
-  color: #111111;
-  border: 1px solid #e5e7eb;
-  border-radius: var(--radius-lg);
-  padding: 1.5rem 1.5rem 1.25rem;
-  box-shadow: var(--shadow-soft);
-}
-.pillar h2,
-.pillar p,
-.pillar li,
-.pillar em {
-  color: #111111;
-}
-.pillar h2 {
-  margin-top: 0;
-  margin-bottom: 0.6rem;
-}
-.pillar p:last-child {
-  margin-bottom: 0;
-}
-.pillar-media {
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-soft);
-}
-.pillar-media img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  min-height: 200px;
-}
-
-@media (min-width: 768px) {
-  .pillar {
-    grid-template-columns: 1.1fr 0.9fr;
-    align-items: center;
-  }
-}
-
-.history-side {
-  display: flex;
-  flex-direction: column;
-  gap: 0.9rem;
-  max-width: 520px;
-  width: 100%;
-  margin-left: auto;
-  margin-top: 1rem;
-  height: 100%;
-}
-.history-hero {
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-soft);
-  flex: 1;
-}
-.history-hero img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  min-height: 280px;
-  object-fit: cover;
-}
-.history-team {
-  display: grid;
-  gap: 0.85rem;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-}
-.team-card {
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: var(--radius-lg);
-  padding: 0.75rem;
-  text-align: center;
-  box-shadow: var(--shadow-soft);
-}
-.team-card img {
-  width: 100%;
-  height: 140px;
-  object-fit: cover;
-  object-position: center top;
-  border-radius: var(--radius-md);
-  margin-bottom: 0.5rem;
-}
-.team-isaac img {
-  object-fit: contain;
-  background: #f5f5f5;
-  object-position: center;
-}
-.team-edgar img {
-  object-fit: contain;
-  background: #f5f5f5;
-  object-position: center;
-}
-
-.pillar.historia {
-  grid-template-columns: 1fr;
-  gap: 1.25rem;
-  align-items: stretch;
-}
-@media (min-width: 992px) {
-  .pillar.historia {
-    grid-template-columns: 1.05fr 1fr;
-    align-items: stretch;
-  }
-}
-.team-card h3 {
-  margin: 0;
-  font-size: 1rem;
-  color: #111111;
-}
-.team-placeholder {
-  width: 100%;
-  height: 160px;
-  border-radius: var(--radius-md);
-  background: linear-gradient(135deg, rgba(7, 90, 34, 0.12), rgba(11, 122, 46, 0.12));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #0f9d3a;
-  font-weight: 600;
-}
-.section-nosotros .two-cols {
-  gap: 3rem;
-}
-.section-nosotros h2 {
-  font-size: 2.1rem;
-  margin-bottom: 0.85rem;
-}
-.section-nosotros p,
-.section-nosotros li {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  color: #111111;
-  font-family: var(--font-body);
-}
-.section-nosotros li {
-  margin-bottom: 0.35rem;
-}
-.section-nosotros em {
-  font-family: var(--font-body);
-  font-style: normal;
-  color: #111111;
-}
-
-.page-hero {
-  position: relative;
-  color: var(--color-white);
-  padding: 3.5rem 0 4.5rem;
-  min-height: clamp(320px, 65vh, 560px);
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  background: linear-gradient(120deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.2)),
-    url("/public/img/mano.jpg") center/cover no-repeat;
-}
-.page-hero h1 {
-  margin-bottom: 0.35rem;
-}
-.page-hero .container {
-  position: relative;
-  z-index: 2;
-}
-.page-hero .hero-bg,
-.hero .hero-bg {
+.page-hero::after{
+  content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.2)),
-    var(--hero-bg-image, url("/public/img/mano.jpg")) center/cover no-repeat;
-  opacity: 0;
-  transition: opacity 0s linear;
+  background: linear-gradient(180deg, rgba(0,0,0,.32), rgba(0,0,0,.58));
+  z-index: 1;
   pointer-events: none;
-  z-index: 0;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
 }
-.page-hero .hero-bg.is-visible,
-.hero .hero-bg.is-visible {
+
+.page-hero .hero-content,
+.page-hero .hero-mini-carousel,
+.page-hero .hero-logo-full{
+  position: relative;
+  z-index: 2;
+}
+
+.hero-bg{
+  position: absolute;
+  inset: 0;
+  background-image: var(--hero-bg-image);
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 600ms ease;
+  filter: brightness(.96);
+}
+
+.hero-bg.is-visible{
   opacity: 1;
 }
-.hero-nosotros {
-  color: var(--color-white);
+
+.hero{
+  padding: 0 !important;
+  /* Altura contenida para un hero mas bajo */
+  min-height: clamp(140px, 24vh, 240px);
+  overflow: hidden;
+  background: var(--color-white);
 }
 
-.site-footer {
-  background-color: #0b7a2e;
-  color: var(--color-white);
-  margin-top: 2.5rem;
+.hero .container{
+  max-width: 100% !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
-.site-footer h3,
-.site-footer h4 {
+
+.hero-grid{
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 0 !important;
+  min-height: inherit;
+  align-items: stretch;
+}
+
+.hero-left,
+.hero-right{
+  position: relative;
+  min-height: inherit;
+  overflow: hidden;
+}
+
+/* Columna izquierda con fondo verde institucional y division 50/50 */
+.hero-left{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: clamp(8px, 2vw, 18px);
+  padding: clamp(8px, 1.4vw, 16px);
+  background: var(--color-white); /* fondo claro uniforme para acompañar el logo */
+  color: var(--color-primary);
+  z-index: 2;
+}
+
+/* Division de la columna izquierda para que logo y texto quepan en un hero mas bajo */
+.hero-logo-full{
+  flex: 0 0 auto; /* deja que el contenido defina la altura y evita recorte */
+  display: flex !important;
+  align-items: center !important; /* center vertically within top area */
+  justify-content: center !important;
+  padding: clamp(6px, 1.2vw, 12px) clamp(8px, 2vw, 24px) 0 clamp(8px, 2vw, 24px) !important;
+  background: transparent !important;
+  overflow: visible !important; /* allow slight overflow/overlap */
   margin-top: 0;
 }
-.site-footer a {
-  color: #f5f5f5;
-}
-.footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-  padding: 0.5rem 0;
-  font-size: 0.8rem;
+
+/* Logo controlado para evitar recortes */
+.hero-logo-full img{
+  max-height: 80px !important;
+  max-width: 160px !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+  transform: none !important;
+  transition: opacity 180ms ease;
 }
 
-@media (min-width: 768px) {
-  .hero-grid {
-    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
-    align-items: center;
-  }
-  .hero-text h1 {
-    font-size: 2.1rem;
-  }
+.hero-logo-full img:hover{
+  transform: none !important;
 }
 
-@media (max-width: 768px) {
-  .hero {
-    padding: 3rem 0 3.5rem;
-    min-height: 70vh;
-  }
-  .hero-ctas {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .hero-ctas .btn {
-    width: 100%;
-    text-align: center;
-  }
-  .hero-kpis {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0.75rem;
-    margin-top: 1rem;
-  }
-  .hero-kpis .kpi-item {
-    text-align: center;
-  }
+/* Ajuste del logo pequeno para mejor legibilidad */
+.hero-logo-full img.logo-small{
+  max-width: 120px !important;
+  max-height: 60px !important;
+  transform: none !important;
+  margin-top: 0 !important;
+  opacity: 0.98 !important;
+}
+/* Reset: no overlay variant active (content should be sibling of logo) */
+.hero-logo-full{
+  position: relative !important;
 }
 
-@media (max-width: 480px) {
-  .hero {
-    padding: 2.5rem 0 3rem;
-    min-height: 65vh;
+/* En mobile hero-logo y hero-content se apilan de forma natural */
+@media (max-width: 900px){
+  .hero-content{ padding: clamp(20px, 4vw, 56px) !important; }
+}
+
+/* Texto debajo ocupando la mitad inferior (ajustado para hero mas pequeno) */
+.hero-content{
+  flex: 1 1 auto;
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  padding: clamp(12px, 2.5vw, 40px) clamp(16px, 2.5vw, 36px) clamp(12px, 3vw, 24px) !important;
+  background: transparent !important;
+  text-align: left;
+}
+
+/* Legacy adjustments retained */
+.hero-logo-full{
+  position: relative !important;
+  width: 100% !important;
+  pointer-events: auto !important;
+}
+
+.hero-logo-full img{
+  opacity: 0.98 !important;
+}
+
+@media (max-width: 900px){
+  .hero-logo-full{
+    padding-left: clamp(12px, 6vw, 24px) !important;
+    padding-right: clamp(12px, 6vw, 24px) !important;
   }
-  .hero-text h1 {
-    font-size: 1.6rem;
-    line-height: 1.25;
+  .hero-logo-full img { max-width: 95% !important; transform: none !important; }
+  .hero-content{ margin-left: 0 !important; }
+}
+
+/* El texto del hero fluye debajo del logo y mantiene legibilidad */
+.hero-content{
+  margin-left: 0 !important;
+  width: 100%;
+  position: relative !important;
+  z-index: 30 !important; /* mantiene el texto sobre el logo si hay superposicion */
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: clamp(18px, 4vw, 56px) clamp(20px, 3vw, 60px) clamp(12px, 4vw, 40px) !important;
+  pointer-events: auto;
+}
+
+.hero-text{
+  max-width: 620px;
+  color: var(--color-primary);
+  text-shadow: none;
+}
+
+.hero-text h1{
+  font-size: clamp(22px, 3.8vw, 48px);
+  line-height: 1.08;
+  margin: 0 0 12px 0;
+}
+
+.hero-text p{
+  font-size: clamp(13px, 1.6vw, 16px);
+  opacity: .96;
+  margin: 0 0 8px 0;
+}
+
+/* Tweak for very small screens */
+@media (max-width: 480px){
+  .hero-text h1{ font-size: clamp(18px, 6vw, 32px); }
+  .hero-text p{ font-size: clamp(12px, 3.5vw, 14px); }
+  .hero-ctas .btn{ font-size: 14px; padding: 10px 14px; }
+}
+
+.hero-ctas{
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+.hero-left .btn-outline{
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+.hero-left .btn-outline:hover{
+  background-color: rgba(0,0,0,0.04);
+  text-decoration: none;
+}
+
+.hero-kpis{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.kpi-item{
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(0,0,0,.28);
+  backdrop-filter: blur(4px);
+}
+
+.kpi-number{
+  font-weight: 800;
+  font-size: 16px;
+  display: block;
+}
+
+.kpi-label{
+  font-size: 12px;
+  opacity: .9;
+}
+
+/* ==========================
+   MINI CAROUSEL
+   - Imagen principal: contain (sin recorte)
+   - Fondo: blur con la misma imagen
+   ========================== */
+.hero-mini-carousel{
+  position: relative;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: inherit;
+  overflow: hidden !important;
+  border-radius: 0 !important;
+  background: var(--color-secondary);
+}
+
+/* Fondo desenfocado */
+.hero-mini-bg{
+  position: absolute;
+  inset: 0;
+  background-image: var(--mini-src);
+  background-size: cover;
+  background-position: center;
+  filter: blur(16px);
+  transform: scale(1.12);
+  opacity: 0.75;
+  transition: opacity 200ms ease;
+}
+
+/* Imagen principal sin zoom exagerado, ajustada para hero mas pequeno */
+.hero-mini-img{
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;       /* clave: no recorta */
+  object-position: center !important;
+  display: block !important;
+  padding: clamp(6px, 1.2vw, 12px);      /* reduced air for smaller hero */
+  transition: opacity 200ms ease, visibility 0s;
+  opacity: 0; /* hidden until loaded to avoid showing alt text */
+}
+.hero-mini-img.is-loaded{ opacity: 1 !important; }
+
+
+.hero-mini-carousel .is-fading{
+  opacity: 0.15;
+}
+
+/* El carrusel queda por encima del logo aunque crezca */
+.hero-right{
+  overflow: visible !important; /* allow carousel to be visible when overlapped */
+  z-index: 30 !important;
+}
+
+.hero-mini-carousel{
+  position: relative !important;
+  z-index: 35 !important; /* front-most within hero */
+  pointer-events: auto !important;
+}
+
+/* El logo permanece debajo del carrusel si se superponen */
+.hero-logo-full{
+  z-index: 10 !important;
+}
+
+.hero-logo-full img{
+  position: relative !important;
+  z-index: 12 !important; /* lower than carousel (35) */
+}
+
+
+/* Responsive: apilar */
+@media (max-width: 900px){
+  .hero{
+    min-height: auto;
   }
-  .hero-text p {
-    font-size: 0.95rem;
-    line-height: 1.5;
+
+  .hero-grid{
+    grid-template-columns: 1fr !important;
+    min-height: auto;
   }
-  .hero-kpis {
+
+  .hero-left{
+    min-height: 200px;
+  }
+
+  .hero-right{
+    min-height: 150px;
+  }
+
+  .hero-mini-carousel{
+    min-height: 150px;
+  }
+
+  .hero-kpis{
     grid-template-columns: 1fr;
   }
+
+  /* En pantallas pequenas se revierte el 50/50 y se ajustan espacios */
+  .hero-logo-full,
+  .hero-content{
+    flex: 0 0 auto;
+    padding-left: clamp(12px, 6vw, 24px) !important;
+    padding-right: clamp(12px, 6vw, 24px) !important;
+  }
+}
+
+/* ==========================
+   Resto de secciones
+   ========================== */
+.section{
+  padding: 64px 0;
+}
+
+.section-alt{
+  background: var(--color-secondary);
+}
+
+.section-header{
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.section-header h2{
+  margin: 0 0 10px;
+}
+
+.section-header p{
+  margin: 0 auto;
+  max-width: 720px;
+  opacity: .85;
+}
+
+/* Layout ordenado para la seccion Historia */
+.section-historia .pillar.historia{
+  display: grid;
+  grid-template-columns: minmax(320px, 1fr) minmax(260px, .85fr);
+  gap: 22px;
+  padding: clamp(18px, 2vw, 26px);
+  background: #f7fbf8;
+  border: 1px solid rgba(0,0,0,0.05);
+  border-radius: 14px;
+  box-shadow: 0 16px 40px -30px rgba(0,0,0,0.35);
+  align-items: center;
+}
+
+.section-historia .pillar-text h2{
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.section-historia .pillar-text p{
+  margin: 0 0 12px 0;
+}
+
+.section-historia .history-side{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-historia .history-hero img{
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 14px 32px -18px rgba(0,0,0,0.35);
+}
+
+.history-team{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.history-team .team-card{
+  background: var(--color-white);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+  box-shadow: 0 12px 32px -24px rgba(0,0,0,0.32);
+}
+
+.history-team .team-card img{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+.history-team .team-card h3{
+  margin: 0;
+}
+
+/* Layout ordenado para la seccion Nosotros */
+.section-nosotros .about-pillars{
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.section-nosotros .pillar{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  padding: clamp(16px, 2vw, 24px);
+  background: #f7fbf8;
+  border: 1px solid rgba(0,0,0,0.05);
+  border-radius: 12px;
+}
+
+.section-nosotros .pillar:nth-child(even){
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.section-nosotros .pillar:nth-child(even) .pillar-text{
+  order: 2;
+}
+
+.section-nosotros .pillar:nth-child(even) .pillar-media{
+  order: 1;
+}
+
+.section-nosotros .pillar-text h2{
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.section-nosotros .pillar-text p{
+  margin: 0;
+}
+
+.section-nosotros .pillar-media img{
+  width: 100%;
+  height: 100%;
+  max-height: 260px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 10px 22px -16px rgba(0,0,0,0.25);
+}
+
+/* Diseno especifico para las tarjetas de Nosotros */
+.section-nosotros .cards-grid {
+  max-width: 980px;
+  margin: 0 auto;
+  gap: 36px;
+}
+
+.section-nosotros .card p,
+.section-nosotros .card h3{
+  text-align: center;
+}
+
+.section-nosotros .card ul {
+  text-align: left;
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+.section-nosotros .cards-grid article.card {
+  max-width: 360px;
+}
+
+.cards-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  align-items: stretch;
+  justify-items: center; /* center cards inside the grid */
+}
+
+.news-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.news-date{
+  display: inline-block;
+  font-size: 12px;
+  opacity: .8;
+  margin-bottom: 6px;
+}
+
+.card-link{
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.afiliacion-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+@media (max-width: 900px){
+  .section-historia .pillar.historia{
+    grid-template-columns: 1fr;
+  }
+
+  .cards-grid{
+    grid-template-columns: 1fr;
+  }
+  .news-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Header y footer integrados en verde */
+.site-header{
+  background: var(--color-brand);
+  color: var(--color-white);
+}
+.site-header .main-nav a{
+  color: var(--color-white);
+}
+.site-footer{
+  background: var(--color-brand);
+  color: var(--color-white);
+  margin-top: 0;
+}
+.site-footer a{
+  color: #e8f7eb;
 }

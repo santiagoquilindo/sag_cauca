@@ -14,10 +14,40 @@
     <div id="site-header"></div>
 
     <main>
-      <section class="page-hero hero-nosotros">
-        <div class="container">
-          <h1>Formulario de afiliaci&oacute;n</h1>
-          <p>Env&iacute;a tus datos para iniciar tu proceso de afiliaci&oacute;n a la SAG Cauca.</p>
+      <!-- Hero institucional con logo en tamaño controlado -->
+      <section class="hero page-hero">
+        <div class="container hero-grid">
+          <div class="hero-left">
+            <div class="hero-logo-full">
+              <img
+                src="/public/img/logosag2.jpg"
+                alt="SAG Cauca"
+                width="160"
+                height="80"
+                decoding="async"
+              />
+            </div>
+            <div class="hero-content">
+              <div class="hero-text">
+                <h1>Formulario de afiliaci&oacute;n</h1>
+                <p>
+                  Env&iacute;a tus datos para iniciar tu proceso de
+                  afiliaci&oacute;n a la SAG Cauca.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="hero-right">
+            <div
+              class="hero-mini-carousel"
+              aria-label="Galer&iacute;a SAG Cauca"
+            >
+              <img
+                data-src="/public/img/cafe1.jpg"
+                alt="Producci&oacute;n agropecuaria en el Cauca"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -26,36 +56,67 @@
           <div>
             <h2>Contacta a la SAG Cauca</h2>
             <p>
-              Completa el formulario y elige si deseas enviar por correo o WhatsApp. No almacenamos tus datos.
+              Completa el formulario y elige si deseas enviar por correo o
+              WhatsApp. No almacenamos tus datos.
             </p>
             <p>
-              Tel&eacute;fono: <a href="tel:+573155692130">315 569 2130</a><br>
+              Tel&eacute;fono: <a href="tel:+573155692130">315 569 2130</a
+              ><br />
               Correo: <a href="mailto:sagcauca@gmail.com">sagcauca@gmail.com</a>
             </p>
           </div>
 
           <div>
             <h2>Formulario</h2>
-            <form class="contact-form" id="contactForm" novalidate>
+            <form class="contact-form" id="contactForm" novalidate aria-describedby="contactStatus contactNote">
               <label for="nombre">Nombre completo</label>
-              <input type="text" id="nombre" name="nombre" required>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                autocomplete="name"
+                placeholder="Escribe tu nombre y apellidos"
+                required
+              />
 
               <label for="correo">Correo electr&oacute;nico</label>
-              <input type="email" id="correo" name="correo" required>
+              <input
+                type="email"
+                id="correo"
+                name="correo"
+                autocomplete="email"
+                inputmode="email"
+                placeholder="tucorreo@ejemplo.com"
+                required
+              />
 
-              <label for="canal">&iquest;C&oacute;mo quieres enviar el mensaje?</label>
-              <select id="canal" name="canal">
-                <option value="correo" selected>Correo electr&oacute;nico</option>
+              <label for="canal"
+                >&iquest;C&oacute;mo quieres enviar el mensaje?</label
+              >
+              <select id="canal" name="canal" required>
+                <option value="correo" selected>
+                  Correo electr&oacute;nico
+                </option>
                 <option value="whatsapp">WhatsApp</option>
               </select>
 
               <label for="mensaje">Mensaje</label>
-              <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                rows="6"
+                minlength="10"
+                placeholder="Cu&eacute;ntanos en qu&eacute; podemos ayudarte"
+                required
+              ></textarea>
 
-              <button type="submit" class="btn btn-accent">Enviar mensaje</button>
+              <button type="submit" class="btn btn-accent">
+                Enviar mensaje
+              </button>
               <p class="form-status" id="contactStatus" aria-live="polite"></p>
-              <p class="form-note">
-                No almacenamos tus datos. Si no se abre tu cliente de correo o WhatsApp, copia el mensaje y env&iacute;alo manualmente.
+              <p class="form-note" id="contactNote">
+                La informaci&oacute;n se usa solo para iniciar tu afiliaci&oacute;n. Si no se abre tu
+                cliente de correo o WhatsApp, copia el mensaje y env&iacute;alo manualmente.
               </p>
             </form>
           </div>
@@ -65,7 +126,7 @@
 
     <div id="site-footer"></div>
 
-    <script src="js/includes.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/includes.js" defer></script>
+    <script src="js/main.js" defer></script>
   </body>
 </html>

@@ -1,172 +1,233 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SAG Cauca - Sociedad de Agricultores y Ganaderos del Cauca</title>
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/utilities.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/sections.css">
-</head>
-<body>
-<div id="site-header"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SAG Cauca - Sociedad de Agricultores y Ganaderos del Cauca</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/utilities.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/sections.css" />
+  </head>
+  <body>
+    <div id="site-header"></div>
 
-<main>
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-left">
+            <!-- LOGO full (fondo) -->
+            <div class="hero-logo-full">
+              <img
+                data-src="/public/img/logosag2.jpg"
+                alt="SAG Cauca"
+                class="logo-small"
+                width="120"
+                height="60"
+                decoding="async"
+              />
+            </div>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-text">
-        <h1>Sociedad de Agricultores y Ganaderos del Cauca</h1>
-        <p>
-          Gremio que representa, articula y fortalece a los productores del Cauca,
-          impulsando un sector agropecuario m&aacute;s competitivo y sostenible.
-        </p>
+            <!-- CONTENIDO encima -->
+            <div class="hero-content">
+              <div class="hero-text">
+                <h1>Sociedad de Agricultores y Ganaderos del Cauca</h1>
+                <p>
+                  Gremio que representa, articula y fortalece a los productores
+                  del Cauca, impulsando un sector agropecuario m&aacute;s
+                  competitivo y sostenible.
+                </p>
 
-        <div class="hero-ctas">
-          <a href="noticias.html" class="btn btn-accent">Noticias y comunicados</a>
-          <a href="contacto.html" class="btn btn-outline">Contacto</a>
-        </div>
+                <div class="hero-ctas">
+                  <a href="noticias.html" class="btn btn-accent"
+                    >Noticias y comunicados</a
+                  >
+                  <a href="contacto.html" class="btn btn-outline">Contacto</a>
+                </div>
 
-        <div class="hero-kpis">
-          <div class="kpi-item">
-            <span class="kpi-number">30%</span>
-            <span class="kpi-label">menos consultas b&aacute;sicas</span>
+                <div class="hero-kpis">
+                  <div class="kpi-item">
+                    <span class="kpi-number">30%</span>
+                    <span class="kpi-label"
+                      >menos consultas b&aacute;sicas</span
+                    >
+                  </div>
+                  <div class="kpi-item">
+                    <span class="kpi-number">+20%</span>
+                    <span class="kpi-label">asistencia a eventos</span>
+                  </div>
+                  <div class="kpi-item">
+                    <span class="kpi-number">500</span>
+                    <span class="kpi-label">visitas mensuales meta</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- end logo-full (contenido ahora dentro) -->
           </div>
-          <div class="kpi-item">
-            <span class="kpi-number">+20%</span>
-            <span class="kpi-label">asistencia a eventos</span>
-          </div>
-          <div class="kpi-item">
-            <span class="kpi-number">500</span>
-            <span class="kpi-label">visitas mensuales meta</span>
+
+          <div class="hero-right">
+            <div
+              class="hero-mini-carousel"
+              aria-label="Galer&iacute;a SAG Cauca"
+            >
+              <div class="hero-mini-bg" aria-hidden="true"></div>
+              <img
+                class="hero-mini-img"
+                data-src="/public/img/cafetero.jpg"
+                alt="Producci&oacute;n agropecuaria en el Cauca"
+              />
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
-    </div>
-  </section>
+      <!-- SECCION SERVICIOS RESUMEN -->
+      <section class="section" id="servicios-resumen">
+        <div class="container">
+          <header class="section-header">
+            <h2>Nosotros</h2>
+            <p>
+              Nuestra identidad gremial: misi&oacute;n, visi&oacute;n y valores
+              que inspiran a la SAG Cauca.
+            </p>
+          </header>
 
-  <!-- SECCION SERVICIOS RESUMEN -->
-  <section class="section" id="servicios-resumen">
-    <div class="container">
-      <header class="section-header">
-        <h2>Nosotros</h2>
-        <p>
-          Nuestra identidad gremial: misi&oacute;n, visi&oacute;n y valores que inspiran a la SAG Cauca.
-        </p>
-      </header>
+          <div class="cards-grid">
+            <article class="card">
+              <h3>Misi&oacute;n</h3>
+              <p>
+                Representar y fortalecer al sector agropecuario del Cauca,
+                impulsando la productividad, la sostenibilidad y el bienestar
+                rural mediante la gesti&oacute;n gremial, la innovaci&oacute;n y
+                el trabajo conjunto con el sector p&uacute;blico y privado.
+              </p>
+            </article>
 
-      <div class="cards-grid">
-        <article class="card">
-          <h3>Misi&oacute;n</h3>
-          <p>
-            Representar y fortalecer al sector agropecuario del Cauca, impulsando la productividad,
-            la sostenibilidad y el bienestar rural mediante la gesti&oacute;n gremial, la innovaci&oacute;n
-            y el trabajo conjunto con el sector p&uacute;blico y privado.
-          </p>
-        </article>
+            <article class="card">
+              <h3>Visi&oacute;n</h3>
+              <p>
+                Ser el gremio l&iacute;der y referente del desarrollo
+                agropecuario en el Cauca, reconocido por impulsar un sector
+                competitivo, innovador y sostenible, que contribuya al progreso
+                econ&oacute;mico, social y ambiental del departamento y al
+                bienestar de sus comunidades rurales.
+              </p>
+            </article>
 
-        <article class="card">
-          <h3>Visi&oacute;n</h3>
-          <p>
-            Ser el gremio l&iacute;der y referente del desarrollo agropecuario en el Cauca, reconocido
-            por impulsar un sector competitivo, innovador y sostenible, que contribuya al progreso
-            econ&oacute;mico, social y ambiental del departamento y al bienestar de sus comunidades rurales.
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>Valores</h3>
-          <ul class="list">
-            <li>Liderazgo gremial</li>
-            <li>Compromiso social</li>
-            <li>Integridad y transparencia</li>
-            <li>Sostenibilidad ambiental</li>
-            <li>Innovaci&oacute;n y competitividad</li>
-            <li>Unidad</li>
-          </ul>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECCION NOTICIAS -->
-  <section class="section section-alt" id="noticias-resumen">
-    <div class="container">
-      <header class="section-header">
-        <h2>Noticias y comunicados</h2>
-        <p>
-          Centralizamos la informaci&oacute;n oficial del gremio para productores,
-          entidades y medios.
-        </p>
-      </header>
-
-      <div class="news-grid">
-        <article class="news-item">
-          <span class="news-date">10 Ene 2026</span>
-          <h3>Comunicado oficial #1</h3>
-          <p>
-            Resumen breve del comunicado oficial. Reemplazar este texto por el
-            contenido real aprobado por comunicaciones.
-          </p>
-          <a href="noticias.html" class="card-link">Leer m&aacute;s en noticias &rarr;</a>
-        </article>
-
-        <article class="news-item">
-          <span class="news-date">05 Ene 2026</span>
-          <h3>Convocatoria a jornada de capacitaci&oacute;n</h3>
-          <p>
-            Resumen de la jornada, tem&aacute;tica y p&uacute;blico objetivo. Reemplazar por
-            informaci&oacute;n real.
-          </p>
-          <a href="noticias.html" class="card-link">Ver calendario de eventos &rarr;</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECCION AFILIACION -->
-  <section class="section" id="afiliacion">
-    <div class="container">
-      <header class="section-header">
-        <h2>Afiliaciones</h2>
-        <p>
-          La afiliaci&oacute;n a la SAG Cauca fortalece la voz del productor y permite
-          acceder a servicios especializados.
-        </p>
-      </header>
-
-      <div class="afiliacion-grid">
-        <div>
-          <h3>Requisitos generales <small>(texto de ejemplo)</small></h3>
-          <ul class="list">
-            <li>Ser productor agr&iacute;cola o ganadero del departamento del Cauca.</li>
-            <li>Estar al d&iacute;a con los requisitos estatutarios vigentes.</li>
-            <li>Presentar la documentaci&oacute;n oficial definida por la SAG Cauca.</li>
-          </ul>
-
-          <h3>Pasos para afiliarse</h3>
-          <ol class="list">
-            <li>Solicitar informaci&oacute;n al correo <strong>sagcauca@gmail.com</strong>.</li>
-            <li>Radicar los documentos requeridos en la oficina de la SAG Cauca.</li>
-            <li>Esperar la validaci&oacute;n y confirmaci&oacute;n de la Junta o el comit&eacute; correspondiente.</li>
-          </ol>
-
-          <a href="contacto.html" class="btn btn-accent">Cont&aacute;ctenos para afiliarse</a>
+            <article class="card">
+              <h3>Valores</h3>
+              <ul class="list">
+                <li>Liderazgo gremial</li>
+                <li>Compromiso social</li>
+                <li>Integridad y transparencia</li>
+                <li>Sostenibilidad ambiental</li>
+                <li>Innovaci&oacute;n y competitividad</li>
+                <li>Unidad</li>
+              </ul>
+            </article>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-</main>
+      <!-- SECCION NOTICIAS -->
+      <section class="section section-alt" id="noticias-resumen">
+        <div class="container">
+          <header class="section-header">
+            <h2>Noticias y comunicados</h2>
+            <p>
+              Centralizamos la informaci&oacute;n oficial del gremio para
+              productores, entidades y medios.
+            </p>
+          </header>
 
-<div id="site-footer"></div>
+          <div class="news-grid">
+            <article class="news-item">
+              <span class="news-date">10 Ene 2026</span>
+              <h3>Comunicado oficial #1</h3>
+              <p>
+                Resumen breve del comunicado oficial. Reemplazar este texto por
+                el contenido real aprobado por comunicaciones.
+              </p>
+              <a href="noticias.html" class="card-link"
+                >Leer m&aacute;s en noticias &rarr;</a
+              >
+            </article>
 
-<script src="js/includes.js"></script>
-<script src="js/main.js"></script>
-</body>
+            <article class="news-item">
+              <span class="news-date">05 Ene 2026</span>
+              <h3>Convocatoria a jornada de capacitaci&oacute;n</h3>
+              <p>
+                Resumen de la jornada, tem&aacute;tica y p&uacute;blico
+                objetivo. Reemplazar por informaci&oacute;n real.
+              </p>
+              <a href="noticias.html" class="card-link"
+                >Ver calendario de eventos &rarr;</a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCION AFILIACION -->
+      <section class="section" id="afiliacion">
+        <div class="container">
+          <header class="section-header">
+            <h2>Afiliaciones</h2>
+            <p>
+              La afiliaci&oacute;n a la SAG Cauca fortalece la voz del productor
+              y permite acceder a servicios especializados.
+            </p>
+          </header>
+
+          <div class="afiliacion-grid">
+            <div>
+              <h3>Requisitos generales <small>(texto de ejemplo)</small></h3>
+              <ul class="list">
+                <li>
+                  Ser productor agr&iacute;cola o ganadero del departamento del
+                  Cauca.
+                </li>
+                <li>
+                  Estar al d&iacute;a con los requisitos estatutarios vigentes.
+                </li>
+                <li>
+                  Presentar la documentaci&oacute;n oficial definida por la SAG
+                  Cauca.
+                </li>
+              </ul>
+
+              <h3>Pasos para afiliarse</h3>
+              <ol class="list">
+                <li>
+                  Solicitar informaci&oacute;n al correo
+                  <strong>sagcauca@gmail.com</strong>.
+                </li>
+                <li>
+                  Radicar los documentos requeridos en la oficina de la SAG
+                  Cauca.
+                </li>
+                <li>
+                  Esperar la validaci&oacute;n y confirmaci&oacute;n de la Junta
+                  o el comit&eacute; correspondiente.
+                </li>
+              </ol>
+
+              <a href="contacto.html" class="btn btn-accent"
+                >Cont&aacute;ctenos para afiliarse</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="js/includes.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </body>
 </html>
-

@@ -68,8 +68,18 @@
 .card {
   background-color: #ffffff;
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-soft);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.06);
   padding: 1.25rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  min-height: 220px; /* consistent card height */
+  width: 100%;
+  max-width: 420px; /* constrain card width to avoid very wide cards */
+  padding: 1.75rem 2rem; /* a bit more interior spacing for content */
+  transition: transform 220ms ease, box-shadow 220ms ease;
 }
 .card h3 {
   margin-bottom: 0.4rem;
@@ -78,6 +88,21 @@
   display: inline-flex;
   margin-top: 0.5rem;
   font-size: 0.9rem;
+}
+
+.card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+}
+.card p {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+
+.card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 18px 44px rgba(0,0,0,0.08);
 }
 
 .news-item {
@@ -179,7 +204,7 @@
 .form-status {
   font-size: 0.9rem;
   margin-top: 0.5rem;
-  color: var(--color-primary);
+  color: var(--color-accent);
 }
 
 .map-wrapper {
@@ -212,7 +237,7 @@
   font-size: 0.9rem;
 }
 .events-table thead {
-  background-color: var(--color-primary);
+  background-color: var(--color-accent);
   color: var(--color-white);
 }
 .events-table tbody tr:nth-child(even) {
@@ -229,7 +254,7 @@
   right: 18px;
   width: 80px;
   height: 80px;
-  background: #25d366;
+  background: var(--color-brand);
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
@@ -240,11 +265,11 @@
   cursor: pointer;
 }
 .whatsapp-fab:hover {
-  background: #1eb45a;
+  background: var(--color-brand);
   text-decoration: none;
 }
 .whatsapp-fab svg {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   fill: #ffffff;
 }

@@ -6,11 +6,15 @@
 }
 
 .site-header {
-  background-color: var(--color-primary);
+  background-color: var(--color-brand);
   color: var(--color-white);
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 100;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 120; /* permanece visible sobre el contenido al hacer scroll */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
 .header-content {
@@ -18,6 +22,12 @@
   align-items: center;
   justify-content: space-between;
   padding: 0.75rem 0;
+}
+.site-header .container{
+  max-width: 1280px; /* header mas ancho sin afectar otras secciones */
+}
+.site-header .container{
+  max-width: 1280px; /* header mas ancho sin afectar otras secciones */
 }
 .nav-toggle {
   background: none;
@@ -55,7 +65,7 @@
   top: 100%;
   left: 0;
   right: 0;
-  background-color: var(--color-primary);
+  background-color: var(--color-brand);
   padding: 0.5rem 1.25rem 0.75rem;
 }
 
@@ -71,8 +81,9 @@
 
 .cards-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.25rem;
+  align-items: stretch; /* ensure cards are same height */
 }
 
 .news-grid {
@@ -114,7 +125,7 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .cards-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
   }
   .news-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));

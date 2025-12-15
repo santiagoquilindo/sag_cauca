@@ -1,94 +1,138 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Noticias - SAG Cauca</title>
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/utilities.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/sections.css">
-</head>
-<body>
-<div id="site-header"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noticias - SAG Cauca</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/utilities.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/sections.css" />
+  </head>
+  <body>
+    <div id="site-header"></div>
 
-<main>
-  <section class="page-hero">
-    <div class="container">
-      <h1>Noticias</h1>
-      <p>Comunicados oficiales, noticias y calendario de eventos del gremio.</p>
-    </div>
-  </section>
+    <main>
+      <!-- Hero institucional con logo en tamaño controlado -->
+      <section class="hero page-hero">
+        <div class="container hero-grid">
+          <div class="hero-left">
+            <div class="hero-logo-full">
+              <img
+                src="/public/img/logosag2.jpg"
+                alt="SAG Cauca"
+                width="160"
+                height="80"
+                decoding="async"
+              />
+            </div>
+            <div class="hero-content">
+              <div class="hero-text">
+                <h1>Noticias</h1>
+                <p>
+                  Comunicados oficiales, noticias y calendario de eventos del
+                  gremio.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="hero-right">
+            <div
+              class="hero-mini-carousel"
+              aria-label="Galer&iacute;a SAG Cauca"
+            >
+              <img
+                data-src="/public/img/cafe1.jpg"
+                alt="Producci&oacute;n agropecuaria en el Cauca"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <section class="section">
-    <div class="container">
-      <h2>Comunicados de prensa</h2>
+      <section class="section">
+        <div class="container">
+          <h2>Comunicados de prensa</h2>
 
-      <div class="news-grid">
-        <article class="news-item">
-          <span class="news-date">10 Ene 2026</span>
-          <h3>T&iacute;tulo del comunicado #1</h3>
+          <div class="news-grid">
+            <article class="news-item">
+              <span class="news-date">22 Ene 2026</span>
+              <h3>Convenio de asistencia t&eacute;cnica con la Gobernaci&oacute;n</h3>
+              <p>
+                Se firm&oacute; un acuerdo marco para fortalecer la asistencia t&eacute;cnica en caf&eacute;,
+                frutales y ganader&iacute;a sostenible en los municipios priorizados del Cauca.
+              </p>
+            </article>
+
+            <article class="news-item">
+              <span class="news-date">12 Ene 2026</span>
+              <h3>Rueda de negocios cafetera 2026</h3>
+              <p>
+                Productores y compradores se reunieron en Popay&aacute;n para cerrar acuerdos de exportaci&oacute;n.
+                La SAG Cauca acompa&ntilde;&oacute; la jornada y brind&oacute; orientaci&oacute;n gremial.
+              </p>
+            </article>
+
+            <article class="news-item">
+              <span class="news-date">05 Ene 2026</span>
+              <h3>Alerta de variabilidad clim&aacute;tica</h3>
+              <p>
+                Recomendaciones para mitigar el impacto de las lluvias intensas en cultivos y pasturas.
+                Consulte las l&iacute;neas de apoyo t&eacute;cnico disponibles para afiliados.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt">
+        <div class="container">
+          <h2>Eventos y calendario</h2>
           <p>
-            Resumen breve del comunicado oficial. Esta secci&oacute;n se alimentar&aacute;
-            con los contenidos validados por comunicaciones.
+            Aqu&iacute; puedes listar las pr&oacute;ximas asambleas, jornadas de
+            capacitaci&oacute;n y actividades del gremio.
           </p>
-        </article>
 
-        <article class="news-item">
-          <span class="news-date">05 Ene 2026</span>
-          <h3>T&iacute;tulo del comunicado #2</h3>
-          <p>
-            Otro ejemplo de noticia o comunicado institucional. Reemplazar por
-            informaci&oacute;n real.
-          </p>
-        </article>
-      </div>
-    </div>
-  </section>
+          <div class="table-wrapper">
+            <table class="events-table">
+              <thead>
+                <tr>
+                  <th>Fecha</th>
+                  <th>Evento</th>
+                  <th>Lugar</th>
+                  <th>Detalle</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>02 Feb 2026</td>
+                  <td>Asamblea general SAG Cauca</td>
+                  <td>Popay&aacute;n</td>
+                  <td>Registro desde las 8:00 a. m. en el auditorio principal.</td>
+                </tr>
+                <tr>
+                  <td>09 Feb 2026</td>
+                  <td>Taller de manejo de agua en fincas</td>
+                  <td>Santander de Quilichao</td>
+                  <td>Cupo limitado, inscripci&oacute;n previa al correo de la SAG.</td>
+                </tr>
+                <tr>
+                  <td>23 Feb 2026</td>
+                  <td>Actualizaci&oacute;n en normatividad sanitaria</td>
+                  <td>Virtual</td>
+                  <td>Sesiones cortas con resoluci&oacute;n de dudas en vivo.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
 
-  <section class="section section-alt">
-    <div class="container">
-      <h2>Eventos y calendario</h2>
-      <p>
-        Aqu&iacute; puedes listar las pr&oacute;ximas asambleas, jornadas de capacitaci&oacute;n y
-        actividades del gremio.
-      </p>
+    <div id="site-footer"></div>
 
-      <div class="table-wrapper">
-        <table class="events-table">
-          <thead>
-            <tr>
-              <th>Fecha</th>
-              <th>Evento</th>
-              <th>Lugar</th>
-              <th>Detalle</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>15 Ene 2026</td>
-              <td>Jornada de capacitaci&oacute;n en buenas pr&aacute;cticas</td>
-              <td>Popay&aacute;n</td>
-              <td><em>Reemplazar por informaci&oacute;n real del evento.</em></td>
-            </tr>
-            <tr>
-              <td>30 Ene 2026</td>
-              <td>Asamblea de productores</td>
-              <td>Cauca</td>
-              <td><em>Reemplazar por informaci&oacute;n real del evento.</em></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-</main>
-
-<div id="site-footer"></div>
-
-<script src="js/includes.js"></script>
-<script src="js/main.js"></script>
-</body>
+    <script src="js/includes.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </body>
 </html>
-
