@@ -30,7 +30,10 @@
   const setupNavToggle = () => {
     const navToggle = document.getElementById("navToggle");
     const mainNav = document.getElementById("mainNav");
-    if (!navToggle || !mainNav) return;
+    if (!navToggle || !mainNav) return false;
+    if (navToggle.dataset.bound === "true") return true;
+
+    navToggle.dataset.bound = "true";
 
     navToggle.setAttribute("aria-expanded", "false");
 
@@ -47,6 +50,7 @@
         }
       });
     });
+    return true;
   };
 
   const highlightActiveNav = () => {
@@ -353,5 +357,11 @@
   };
 
   document.addEventListener("partials:loaded", init);
+  document.addEventListener("partials:loaded", () => {
+    // Reintenta cuando el header se inserta por AJAX
+    setupNavToggle();
+    setFooterYear();
+    highlightActiveNav();
+  });
   document.addEventListener("DOMContentLoaded", init);
 })();
