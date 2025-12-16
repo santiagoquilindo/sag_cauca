@@ -48,20 +48,20 @@
   font-weight: 600;
 }
 .btn-accent {
-  background-color: var(--color-accent);
-  color: #3b2607;
+  background-color: var(--color-brand);
+  color: #ffffff;
 }
 .btn-accent:hover {
   filter: brightness(1.05);
   text-decoration: none;
 }
 .btn-outline {
-  background: transparent;
+  background: var(--color-brand);
   border-color: #ffffff;
   color: #ffffff;
 }
 .btn-outline:hover {
-  background-color: rgba(255, 255, 255, 0.12);
+  background-color: var(--color-brand);
   text-decoration: none;
 }
 
@@ -184,7 +184,7 @@
 }
 .contact-form input:focus,
 .contact-form textarea:focus {
-  outline: 2px solid var(--color-accent);
+  outline: 2px solid var(--color-brand);
   outline-offset: 1px;
 }
 .contact-form select {
@@ -204,7 +204,7 @@
 .form-status {
   font-size: 0.9rem;
   margin-top: 0.5rem;
-  color: var(--color-accent);
+  color: var(--color-brand);
 }
 
 .map-wrapper {
@@ -237,7 +237,7 @@
   font-size: 0.9rem;
 }
 .events-table thead {
-  background-color: var(--color-accent);
+  background-color: #0b7a2e;
   color: var(--color-white);
 }
 .events-table tbody tr:nth-child(even) {

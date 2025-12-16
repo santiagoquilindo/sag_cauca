@@ -5,8 +5,8 @@
   const HERO_FALLBACK_IMAGE = "/public/img/cultivo.jpg";
   const HERO_CAROUSEL_IMAGES = [
     "/public/img/cana.jpg",
-    "/public/img/panela1.jpg",
-    "/public/img/cafe.jpg",
+    "/public/img/panela2.jpg",
+    "/public/img/cafetero.jpg",
     "/public/img/forestal.jpg",
     "/public/img/pina.jpg",
     "/public/img/fresa.jpg",
@@ -14,7 +14,6 @@
     "/public/img/normando1.jpg",
     "/public/img/brahman.jpg",
     "/public/img/brahman2.jpg",
-    "/public/img/mango1.jpg",
     "/public/img/mango2.jpg",
     "/public/img/fresa1.jpg",
     "/public/img/cultivo.jpg",

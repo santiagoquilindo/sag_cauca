@@ -202,11 +202,12 @@
   margin-top: 18px;
 }
 .hero-left .btn-outline{
-  border-color: var(--color-primary);
-  color: var(--color-primary);
+  border-color: var(--color-brand);
+  color: var(--color-white);
 }
 .hero-left .btn-outline:hover{
-  background-color: rgba(0,0,0,0.04);
+  background-color: var(--color-white);
+  color: #000000;
   text-decoration: none;
 }
 
