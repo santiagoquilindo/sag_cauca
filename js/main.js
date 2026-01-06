@@ -155,6 +155,57 @@
     forms.forEach((form) => form.addEventListener("submit", handleFormSubmit(form)));
   };
 
+  const setupGalleryLightbox = () => {
+    const gallery = document.querySelector(".team-gallery-grid");
+    if (!gallery) return;
+
+    const openLightbox = (src, alt) => {
+      const existing = document.querySelector(".image-lightbox");
+      if (existing) existing.remove();
+
+      const overlay = document.createElement("div");
+      overlay.className = "image-lightbox";
+      overlay.setAttribute("role", "dialog");
+      overlay.setAttribute("aria-modal", "true");
+
+      const img = document.createElement("img");
+      img.src = src;
+      img.alt = alt || "Imagen ampliada";
+
+      const closeBtn = document.createElement("button");
+      closeBtn.type = "button";
+      closeBtn.className = "lightbox-close";
+      closeBtn.textContent = "Cerrar";
+
+      const close = () => {
+        overlay.remove();
+        document.body.style.overflow = "";
+        document.removeEventListener("keydown", onKey);
+      };
+
+      const onKey = (event) => {
+        if (event.key === "Escape") close();
+      };
+
+      closeBtn.addEventListener("click", close);
+      overlay.addEventListener("click", (event) => {
+        if (event.target === overlay) close();
+      });
+      document.addEventListener("keydown", onKey);
+
+      overlay.appendChild(closeBtn);
+      overlay.appendChild(img);
+      document.body.appendChild(overlay);
+      document.body.style.overflow = "hidden";
+    };
+
+    gallery.addEventListener("click", (event) => {
+      const target = event.target;
+      if (!(target instanceof HTMLImageElement)) return;
+      openLightbox(target.src, target.alt);
+    });
+  };
+
   const normalizeSrc = (src) => {
     if (!src) return "";
     if (/^https?:\/\//i.test(src)) return src;
@@ -331,11 +382,153 @@
     });
   };
 
+  const extractImageUrl = (html) => {
+    if (!html) return "";
+    const match = html.match(/<img[^>]+src=["']([^"']+)["']/i);
+    return match ? match[1] : "";
+  };
+
+  const htmlToText = (html) => {
+    if (!html) return "";
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, "text/html");
+    return (doc.body.textContent || "").trim();
+  };
+
+  const loadBloggerNews = (force = false) => {
+    const container = document.getElementById("blogger-news");
+    if (!container) return;
+
+    const feedBase = container.dataset.bloggerFeed || "";
+    const maxResults = Number.parseInt(container.dataset.maxResults || "9", 10) || 9;
+    if (!feedBase) return;
+    const currentState = container.dataset.bloggerState || "";
+    if (!force && (currentState === "loading" || currentState === "done")) return;
+    container.dataset.bloggerState = "loading";
+
+    const blogUrl = "https://sag-cauca.blogspot.com/";
+    const callbackName = `bloggerFeedCallback_${Date.now()}`;
+    let script;
+    const cleanup = () => {
+      if (script && script.parentNode) script.parentNode.removeChild(script);
+      delete window[callbackName];
+    };
+    const showFallback = (message) => {
+      container.innerHTML = "";
+      const item = document.createElement("article");
+      item.className = "news-item";
+      const title = document.createElement("h3");
+      title.textContent = "Publicaciones recientes";
+      const text = document.createElement("p");
+      text.textContent = message;
+      const link = document.createElement("a");
+      link.className = "news-link";
+      link.href = blogUrl;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.textContent = "Ver todas las noticias";
+      item.appendChild(title);
+      item.appendChild(text);
+      item.appendChild(link);
+      container.appendChild(item);
+    };
+
+    window[callbackName] = (data) => {
+      const entries = data?.feed?.entry || [];
+      container.innerHTML = "";
+
+      if (!entries.length) {
+        showFallback("Aún no hay publicaciones en el blog.");
+        container.dataset.bloggerState = "done";
+        return;
+      }
+
+      const fragment = document.createDocumentFragment();
+      entries.slice(0, maxResults).forEach((entry) => {
+        const title = entry?.title?.$t || "Publicación";
+        const link = entry?.link?.find((item) => item.rel === "alternate")?.href || "#";
+        const published = entry?.published?.$t || entry?.updated?.$t || "";
+        const date = published
+          ? new Date(published).toLocaleDateString("es-CO", {
+              day: "2-digit",
+              month: "short",
+              year: "numeric",
+            })
+          : "";
+        const rawHtml = entry?.content?.$t || entry?.summary?.$t || "";
+        const imageUrl = extractImageUrl(rawHtml);
+        const text = htmlToText(rawHtml);
+        const excerpt = text.length > 180 ? `${text.slice(0, 177)}...` : text;
+
+        const article = document.createElement("article");
+        article.className = "news-item";
+
+        if (imageUrl) {
+          const img = document.createElement("img");
+          img.className = "news-thumb";
+          img.src = imageUrl;
+          img.alt = title;
+          img.loading = "lazy";
+          img.decoding = "async";
+          article.appendChild(img);
+        }
+
+        if (date) {
+          const dateEl = document.createElement("span");
+          dateEl.className = "news-date";
+          dateEl.textContent = date;
+          article.appendChild(dateEl);
+        }
+
+        const titleEl = document.createElement("h3");
+        const linkEl = document.createElement("a");
+        linkEl.href = link;
+        linkEl.target = "_blank";
+        linkEl.rel = "noopener noreferrer";
+        linkEl.textContent = title;
+        titleEl.appendChild(linkEl);
+        article.appendChild(titleEl);
+
+        if (excerpt) {
+          const body = document.createElement("p");
+          body.textContent = excerpt;
+          article.appendChild(body);
+        }
+
+        fragment.appendChild(article);
+      });
+
+      container.appendChild(fragment);
+      container.dataset.bloggerState = "done";
+      cleanup();
+    };
+
+    script = document.createElement("script");
+    const separator = feedBase.includes("?") ? "&" : "?";
+    script.src = `${feedBase}${separator}alt=json-in-script&max-results=${maxResults}&callback=${callbackName}`;
+    script.onerror = () => {
+      showFallback("No se pudo cargar el blog. Intenta de nuevo m\u00e1s tarde.");
+      container.dataset.bloggerState = "error";
+      cleanup();
+    };
+    document.body.appendChild(script);
+    setTimeout(() => {
+      if (container.dataset.bloggerState === "loading") {
+        showFallback("No se pudo cargar el blog. Intenta de nuevo m\u00e1s tarde.");
+        container.dataset.bloggerState = "error";
+        cleanup();
+      }
+    }, 6000);
+  };
+
   const init = async () => {
     if (initialized) return;
     setFooterYear();
     setupNavToggle();
     setupContactForms();
+    setupGalleryLightbox();
+    loadBloggerNews();
+    setTimeout(() => loadBloggerNews(true), 2500);
     // Asegura que las imagenes con data-src se resuelvan antes de mostrarlas
     await loadImagesFromDataSrc();
     setupHeroCarousel();
@@ -367,4 +560,5 @@
     highlightActiveNav();
   });
   document.addEventListener("DOMContentLoaded", init);
+  window.loadBloggerNews = loadBloggerNews;
 })();

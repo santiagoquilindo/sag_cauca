@@ -90,10 +90,16 @@
   background: transparent !important;
   overflow: visible !important; /* allow slight overflow/overlap */
   margin-top: 0;
+  position: relative !important;
+  width: 100% !important;
+  pointer-events: auto !important;
+  z-index: 10 !important;
 }
 
 /* Logo controlado para evitar recortes */
 .hero-logo-full img{
+  position: relative !important;
+  z-index: 12 !important; /* lower than carousel (35) */
   max-height: 80px !important;
   max-width: 160px !important;
   width: auto !important;
@@ -102,6 +108,7 @@
   display: block !important;
   transform: none !important;
   transition: opacity 180ms ease;
+  opacity: 0.98 !important;
 }
 
 .hero-logo-full img:hover{
@@ -116,36 +123,9 @@
   margin-top: 0 !important;
   opacity: 0.98 !important;
 }
-/* Reset: no overlay variant active (content should be sibling of logo) */
-.hero-logo-full{
-  position: relative !important;
-}
-
 /* En mobile hero-logo y hero-content se apilan de forma natural */
 @media (max-width: 900px){
   .hero-content{ padding: clamp(20px, 4vw, 56px) !important; }
-}
-
-/* Texto debajo ocupando la mitad inferior (ajustado para hero mas pequeno) */
-.hero-content{
-  flex: 1 1 auto;
-  display: flex !important;
-  align-items: flex-start !important;
-  justify-content: center !important;
-  padding: clamp(12px, 2.5vw, 40px) clamp(16px, 2.5vw, 36px) clamp(12px, 3vw, 24px) !important;
-  background: transparent !important;
-  text-align: left;
-}
-
-/* Legacy adjustments retained */
-.hero-logo-full{
-  position: relative !important;
-  width: 100% !important;
-  pointer-events: auto !important;
-}
-
-.hero-logo-full img{
-  opacity: 0.98 !important;
 }
 
 @media (max-width: 900px){
@@ -159,6 +139,7 @@
 
 /* El texto del hero fluye debajo del logo y mantiene legibilidad */
 .hero-content{
+  flex: 1 1 auto;
   margin-left: 0 !important;
   width: 100%;
   position: relative !important;
@@ -168,6 +149,7 @@
   justify-content: center;
   padding: clamp(18px, 4vw, 56px) clamp(20px, 3vw, 60px) clamp(12px, 4vw, 40px) !important;
   pointer-events: auto;
+  text-align: left;
 }
 
 .hero-text{
@@ -200,15 +182,6 @@
   gap: 12px;
   flex-wrap: wrap;
   margin-top: 18px;
-}
-.hero-left .btn-outline{
-  border-color: var(--color-brand);
-  color: var(--color-white);
-}
-.hero-left .btn-outline:hover{
-  background-color: var(--color-white);
-  color: #000000;
-  text-decoration: none;
 }
 
 .hero-kpis{
@@ -249,6 +222,8 @@
   overflow: hidden !important;
   border-radius: 0 !important;
   background: var(--color-secondary);
+  z-index: 35 !important; /* front-most within hero */
+  pointer-events: auto !important;
 }
 
 /* Fondo desenfocado */
@@ -270,10 +245,10 @@
   inset: 0;
   width: 100% !important;
   height: 100% !important;
-  object-fit: contain !important;       /* clave: no recorta */
+  object-fit: contain !important;       /* evita recorte excesivo */
   object-position: center !important;
   display: block !important;
-  padding: clamp(6px, 1.2vw, 12px);      /* reduced air for smaller hero */
+  padding: 0;
   transition: opacity 200ms ease, visibility 0s;
   opacity: 0; /* hidden until loaded to avoid showing alt text */
 }
@@ -288,22 +263,6 @@
 .hero-right{
   overflow: visible !important; /* allow carousel to be visible when overlapped */
   z-index: 30 !important;
-}
-
-.hero-mini-carousel{
-  position: relative !important;
-  z-index: 35 !important; /* front-most within hero */
-  pointer-events: auto !important;
-}
-
-/* El logo permanece debajo del carrusel si se superponen */
-.hero-logo-full{
-  z-index: 10 !important;
-}
-
-.hero-logo-full img{
-  position: relative !important;
-  z-index: 12 !important; /* lower than carousel (35) */
 }
 
 
@@ -369,17 +328,127 @@
   opacity: .85;
 }
 
+.section-logo{
+  margin: 0 0 18px;
+}
+.section-logo .logo-img{
+  height: 40px;
+}
+
+.team-section .card{
+  border: 2px solid var(--color-brand);
+}
+.team-section .cards-grid{
+  grid-template-columns: 1fr;
+  max-width: 360px;
+}
+
+.team-layout{
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.3fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.team-gallery{
+  background: #f7fbf8;
+  border: 2px solid var(--color-brand);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 18px 36px rgba(0,0,0,0.2);
+  padding: 12px;
+  max-height: 520px;
+  overflow-y: auto;
+}
+
+.team-gallery-grid{
+  display: grid;
+  gap: 10px;
+}
+
+.team-gallery-grid img{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center 20%;
+  background: #ffffff;
+  border-radius: 10px;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+  transform-origin: center;
+  position: relative;
+  z-index: 0;
+}
+
+.team-gallery-grid img:hover{
+  transform: scale(1.6);
+  z-index: 2;
+  box-shadow: 0 16px 30px rgba(0,0,0,0.25);
+}
+
+.image-lightbox{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 5000;
+}
+.image-lightbox img{
+  width: min(88vw, 1200px);
+  height: min(82vh, 820px);
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 18px 44px rgba(0,0,0,0.35);
+}
+.image-lightbox .lightbox-close{
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  background: #ffffff;
+  border: 2px solid var(--color-brand);
+  color: #111111;
+  border-radius: 999px;
+  padding: 0.3rem 0.75rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+.image-lightbox .lightbox-close:hover,
+.image-lightbox .lightbox-close:focus-visible{
+  background: var(--color-brand);
+  color: #ffffff;
+}
+
+#afiliacion .btn-outline{
+  background: #ffffff;
+  border-color: var(--color-brand);
+  color: #111111;
+}
+#afiliacion .btn-outline:hover,
+#afiliacion .btn-outline:focus-visible{
+  background: var(--color-brand);
+  border-color: var(--color-brand);
+  color: #ffffff;
+  text-decoration: none;
+}
+
 /* Layout ordenado para la seccion Historia */
 .section-historia .pillar.historia{
   display: grid;
-  grid-template-columns: minmax(320px, 1fr) minmax(260px, .85fr);
-  gap: 22px;
-  padding: clamp(18px, 2vw, 26px);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  padding: 1.75rem 2rem;
   background: #f7fbf8;
-  border: 1px solid rgba(0,0,0,0.05);
-  border-radius: 14px;
-  box-shadow: 0 16px 40px -30px rgba(0,0,0,0.35);
+  border: 2px solid var(--color-brand);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 18px 36px rgba(0,0,0,0.2);
+  transition: transform 220ms ease, box-shadow 220ms ease;
   align-items: center;
+}
+.section-historia .pillar.historia:hover{
+  transform: translateY(-6px);
+  border-color: var(--color-brand);
+  box-shadow: 0 24px 52px rgba(0,0,0,0.28);
 }
 
 .section-historia .pillar-text h2{
@@ -389,6 +458,8 @@
 
 .section-historia .pillar-text p{
   margin: 0 0 12px 0;
+  text-align: left;
+  word-spacing: normal;
 }
 
 .section-historia .history-side{
@@ -401,9 +472,10 @@
   width: 100%;
   max-width: 520px;
   height: auto;
-  border-radius: 12px;
+  max-height: 260px;
+  border-radius: 10px;
   object-fit: cover;
-  box-shadow: 0 14px 32px -18px rgba(0,0,0,0.35);
+  box-shadow: 0 10px 22px -16px rgba(0,0,0,0.25);
 }
 
 .history-team{
@@ -414,12 +486,42 @@
 }
 
 .history-team .team-card{
-  background: var(--color-white);
-  border: 1px solid rgba(0,0,0,0.06);
-  border-radius: 12px;
-  padding: 12px;
+  background: #f7fbf8;
+  border: 2px solid var(--color-brand);
+  border-radius: var(--radius-lg);
+  padding: 16px;
   text-align: center;
-  box-shadow: 0 12px 32px -24px rgba(0,0,0,0.32);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.12);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+.history-team .team-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 18px 44px rgba(0,0,0,0.16);
+}
+
+.contact-card{
+  background: #f7fbf8;
+  border: 2px solid var(--color-brand);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 18px 36px rgba(0,0,0,0.2);
+  padding: 1.75rem 2rem;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+.contact-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 24px 52px rgba(0,0,0,0.28);
+}
+.contact-card .btn-outline{
+  background: #ffffff;
+  border-color: var(--color-brand);
+  color: #111111;
+}
+.contact-card .btn-outline:hover,
+.contact-card .btn-outline:focus-visible{
+  background: var(--color-brand);
+  border-color: var(--color-brand);
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .history-team .team-card img{
@@ -428,8 +530,8 @@
   height: auto;
   max-height: 280px;
   object-fit: contain;
-  background: #f7f7f7;
-  border-radius: 10px;
+  background: #ffffff;
+  border-radius: 12px;
   margin-bottom: 8px;
 }
 
@@ -448,10 +550,16 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 18px;
-  padding: clamp(16px, 2vw, 24px);
+  padding: 1.75rem 2rem;
   background: #f7fbf8;
-  border: 1px solid rgba(0,0,0,0.05);
-  border-radius: 12px;
+  border: 2px solid var(--color-brand);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 18px 36px rgba(0,0,0,0.2);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+.section-nosotros .pillar:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 24px 52px rgba(0,0,0,0.28);
 }
 
 .section-nosotros .pillar:nth-child(even){
@@ -473,6 +581,8 @@
 
 .section-nosotros .pillar-text p{
   margin: 0;
+  text-align: left;
+  word-spacing: normal;
 }
 
 .section-nosotros .pillar-media img{
@@ -495,15 +605,54 @@
 .section-nosotros .card h3{
   text-align: center;
 }
+.section-nosotros .card p{
+  text-align: justify;
+  color: #2b2b2b;
+}
+.section-nosotros .card .btn-outline{
+  background: #ffffff;
+  border-color: var(--color-brand);
+  color: #111111;
+}
+.section-nosotros .card .btn-outline:hover,
+.section-nosotros .card .btn-outline:focus-visible{
+  background: var(--color-brand);
+  border-color: var(--color-brand);
+  color: #ffffff;
+}
 
 .section-nosotros .card ul {
   text-align: left;
-  list-style-position: inside;
+  color: #2b2b2b;
+  list-style: none;
   padding-left: 0;
+  margin: 0;
+}
+.section-nosotros .card ul li{
+  position: relative;
+  padding-left: 1.4rem;
+  margin: 0.35rem 0;
+}
+.section-nosotros .card ul li::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.35rem;
+  width: 0.55rem;
+  height: 0.3rem;
+  border-left: 2px solid var(--color-brand);
+  border-bottom: 2px solid var(--color-brand);
+  transform: rotate(-45deg);
 }
 
 .section-nosotros .cards-grid article.card {
   max-width: 360px;
+}
+.section-nosotros .card {
+  border: 2px solid var(--color-brand);
+  min-height: 360px;
+  padding-top: 2.1rem;
+  padding-bottom: 2.1rem;
 }
 
 .cards-grid{
@@ -542,6 +691,13 @@
 @media (max-width: 900px){
   .section-historia .pillar.historia{
     grid-template-columns: 1fr;
+  }
+
+  .team-layout{
+    grid-template-columns: 1fr;
+  }
+  .team-gallery{
+    max-height: 260px;
   }
 
   .cards-grid{

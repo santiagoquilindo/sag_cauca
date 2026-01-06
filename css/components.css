@@ -48,28 +48,53 @@
   font-weight: 600;
 }
 .btn-accent {
-  background-color: var(--color-brand);
-  color: #ffffff;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
 }
 .btn-accent:hover {
   filter: brightness(1.05);
   text-decoration: none;
 }
 .btn-outline {
-  background: var(--color-brand);
+  background: var(--color-secondary);
   border-color: #ffffff;
-  color: #ffffff;
+  color: var(--color-primary);
 }
 .btn-outline:hover {
   background-color: var(--color-brand);
+  color: #ffffff;
+  text-decoration: none;
+}
+.btn-outline.btn-brand{
+  background: #ffffff;
+  border: 2px solid var(--color-brand);
+  color: #111111;
+}
+.btn-outline.btn-brand:hover,
+.btn-outline.btn-brand:focus-visible{
+  background: var(--color-brand);
+  border-color: var(--color-brand);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.hero-ctas .btn {
+  background: #ffffff;
+  border-color: var(--color-brand);
+  color: #111111;
+}
+.hero-ctas .btn:hover,
+.hero-ctas .btn:focus-visible {
+  background: var(--color-brand);
+  border-color: var(--color-brand);
+  color: #ffffff;
   text-decoration: none;
 }
 
 .card {
-  background-color: #ffffff;
+  background-color: var(--color-secondary);
   border-radius: var(--radius-lg);
-  box-shadow: 0 14px 32px rgba(0,0,0,0.06);
-  padding: 1.25rem 1.4rem;
+  box-shadow: 0 14px 32px var(--color-primary);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -80,9 +105,6 @@
   max-width: 420px; /* constrain card width to avoid very wide cards */
   padding: 1.75rem 2rem; /* a bit more interior spacing for content */
   transition: transform 220ms ease, box-shadow 220ms ease;
-}
-.card h3 {
-  margin-bottom: 0.4rem;
 }
 .card-link {
   display: inline-flex;
@@ -110,6 +132,16 @@
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-soft);
   padding: 1rem 1.25rem;
+}
+.news-item .news-thumb{
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 0.75rem;
+}
+.news-cta{
+  margin-top: 16px;
 }
 .news-date {
   display: inline-block;
@@ -245,7 +277,26 @@
 }
 
 .social-links a {
-  margin-right: 0.75rem;
+  margin-right: 0.6rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  color: #e8f7eb;
+  transition: background 160ms ease, transform 160ms ease;
+}
+.social-links a:hover {
+  background: rgba(255, 255, 255, 0.24);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+.social-links svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
 }
 
 .whatsapp-fab {

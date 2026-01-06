@@ -29,6 +29,7 @@ body {
   color: var(--color-text);
   background-color: var(--color-bg);
   line-height: 1.65;
+  font-size: 17px;
 }
 img {
   max-width: 100%;

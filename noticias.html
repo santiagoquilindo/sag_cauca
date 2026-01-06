@@ -55,33 +55,22 @@
         <div class="container">
           <h2>Comunicados de prensa</h2>
 
-          <div class="news-grid">
+          <div
+            class="news-grid"
+            id="blogger-news"
+            data-blogger-feed="https://sag-cauca.blogspot.com/feeds/posts/default"
+            data-max-results="9"
+          >
             <article class="news-item">
-              <span class="news-date">22 Ene 2026</span>
-              <h3>Convenio de asistencia t&eacute;cnica con la Gobernaci&oacute;n</h3>
-              <p>
-                Se firm&oacute; un acuerdo marco para fortalecer la asistencia t&eacute;cnica en caf&eacute;,
-                frutales y ganader&iacute;a sostenible en los municipios priorizados del Cauca.
-              </p>
+              <span class="news-date">Cargando...</span>
+              <h3>Publicaciones recientes</h3>
+              <p>Conectando con el blog de SAG Cauca.</p>
             </article>
-
-            <article class="news-item">
-              <span class="news-date">12 Ene 2026</span>
-              <h3>Rueda de negocios cafetera 2026</h3>
-              <p>
-                Productores y compradores se reunieron en Popay&aacute;n para cerrar acuerdos de exportaci&oacute;n.
-                La SAG Cauca acompa&ntilde;&oacute; la jornada y brind&oacute; orientaci&oacute;n gremial.
-              </p>
-            </article>
-
-            <article class="news-item">
-              <span class="news-date">05 Ene 2026</span>
-              <h3>Alerta de variabilidad clim&aacute;tica</h3>
-              <p>
-                Recomendaciones para mitigar el impacto de las lluvias intensas en cultivos y pasturas.
-                Consulte las l&iacute;neas de apoyo t&eacute;cnico disponibles para afiliados.
-              </p>
-            </article>
+          </div>
+          <div class="news-cta">
+            <a class="btn btn-outline btn-brand" href="https://sag-cauca.blogspot.com/" target="_blank" rel="noopener noreferrer">
+              Ver todas las noticias
+            </a>
           </div>
         </div>
       </section>
@@ -133,6 +122,13 @@
     <div id="site-footer"></div>
 
     <script src="js/includes.js" defer></script>
-    <script src="js/main.js" defer></script>
+    <script src="js/main.js?v=1" defer></script>
+    <script>
+      window.addEventListener("load", () => {
+        if (typeof window.loadBloggerNews === "function") {
+          window.loadBloggerNews(true);
+        }
+      });
+    </script>
   </body>
 </html>
